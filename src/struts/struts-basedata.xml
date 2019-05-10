@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="baseDataAction" namespace="/" extends="struts-default">
+	    <!-- 字典 -->
+	    <action name="getDataList" class="baseDataAction" method="getDataList">
+            <result name="success">basedata/base_data_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="getBaseDataByPage" class="baseDataAction" method="getBaseDataByPage"></action>
+        <action name="saveBaseData" class="baseDataAction" method="saveBaseData"></action>
+        <action name="updateBaseData" class="baseDataAction" method="updateBaseData"></action>
+        <action name="deleteBaseData" class="baseDataAction" method="deleteBaseData"></action>
+        
+        <!-- 字典详情 -->
+        <action name="getListByBaseDataId" class="baseDataDetailAction" method="getListByBaseDataId">
+            <result name="success">basedata/base_data_detail_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="saveBaseDataDetail" class="baseDataDetailAction" method="saveBaseDataDetail"></action>
+        <action name="updateBaseDataDetail" class="baseDataDetailAction" method="updateBaseDataDetail"></action>
+        <action name="deleteBaseDataDetail" class="baseDataDetailAction" method="deleteBaseDataDetail"></action>
+        <action name="toSynData" class="userAction" method="toSynData"></action>
+	</package>
+</struts>

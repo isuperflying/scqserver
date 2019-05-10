@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="trainCourseAction" namespace="/" extends="struts-default">
+	    <!-- 课件 -->
+	    <action name="getTrainCourseList" class="trainCourseAction" method="getDataList">
+            <result name="success">trainCourse/train_course_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddTrainCourse" class="trainCourseAction" method="toAddTrainCourse">
+            <result name="success">trainCourse/add_train_course.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="saveTrainCourse" class="trainCourseAction" method="saveTrainCourse">
+            <result name="success" type="redirectAction">getTrainCourseList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toUpdateTrainCourse" class="trainCourseAction" method="toUpdateTrainCourse">
+            <result name="success">trainCourse/edit_train_course.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateTrainCourse" class="trainCourseAction" method="updateTrainCourse">
+            <result name="success" type="redirectAction">getTrainCourseList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="deleteTrainCourse" class="trainCourseAction" method="deleteTrainCourse"></action>
+        <action name="getTestData" class="trainCourseAction" method="getTestData"></action>
+        <action name="getMobileHomeDataList" class="trainCourseAction" method="getMobileHomeDataList"></action>
+	</package>
+</struts>

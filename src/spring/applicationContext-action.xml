@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="userAction" class="com.ant.scq.action.UserAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="trainInfoAction" class="com.ant.scq.action.TrainInfoAction"
+		scope="prototype">
+		<property name="trainInfoService" ref="trainInfoService"></property>
+	</bean>
+	<bean id="menuTypeAction" class="com.ant.scq.action.MenuTypeAction"
+		scope="prototype">
+		<property name="menuTypeService" ref="menuTypeService"></property>
+	</bean>
+	<bean id="courseInfoAction" class="com.ant.scq.action.CourseInfoAction"
+		scope="prototype">
+		<property name="courseInfoService" ref="courseInfoService"></property>
+		<property name="menuTypeService" ref="menuTypeService"></property>
+		<property name="teacherInfoService" ref="teacherInfoService"></property>
+	</bean>
+	<bean id="teacherInfoAction" class="com.ant.scq.action.TeacherInfoAction"
+		scope="prototype">
+		<property name="teacherInfoService" ref="teacherInfoService"></property>
+	</bean>
+	<bean id="subjectAction" class="com.ant.scq.action.SubjectAction"
+		scope="prototype">
+		<property name="subjectService" ref="subjectService"></property>
+	</bean>
+	<bean id="subjectItemAction" class="com.ant.scq.action.SubjectItemAction"
+		scope="prototype">
+		<property name="subjectItemService" ref="subjectItemService"></property>
+	</bean>
+	<bean id="subjectUserAction" class="com.ant.scq.action.SubjectUserAction"
+		scope="prototype">
+		<property name="subjectUserService" ref="subjectUserService"></property>
+	</bean>
+	<bean id="subjectCommentAction" class="com.ant.scq.action.SubjectCommentAction"
+		scope="prototype">
+		<property name="subjectCommentService" ref="subjectCommentService"></property>
+	</bean>
+	<bean id="trainCommentAction" class="com.ant.scq.action.TrainCommentAction"
+		scope="prototype">
+		<property name="trainCommentService" ref="trainCommentService"></property>
+	</bean>
+	<bean id="examInfoAction" class="com.ant.scq.action.ExamInfoAction"
+		scope="prototype">
+		<property name="examInfoService" ref="examInfoService"></property>
+		<property name="userExamService" ref="userExamService"></property>
+	</bean>
+	<bean id="userExamAction" class="com.ant.scq.action.UserExamAction"
+		scope="prototype">
+		<property name="userExamService" ref="userExamService"></property>
+	</bean>
+	<bean id="scoreItemAction" class="com.ant.scq.action.ScoreItemAction"
+		scope="prototype">
+		<property name="scoreItemService" ref="scoreItemService"></property>
+	</bean>
+	<bean id="sourceInfoAction" class="com.ant.scq.action.SourceInfoAction"
+		scope="prototype">
+		<property name="sourceInfoService" ref="sourceInfoService"></property>
+	</bean>
+</beans>

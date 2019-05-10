@@ -1,0 +1,69 @@
+.emp_main_all_div {
+	background-repeat: repeat-x;
+	width: 1200px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #51b7b2;
+}
+
+.emp_main_top_div {
+	width: 1030px;
+	height: 74px;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+}
+
+.emp_main_content_div {
+	background-repeat:repeat-x;
+	width: 1030px;
+	height: 575px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../images/bg_04.png");
+}
+
+.emp_main_top_logo {
+	margin-top: 5px;
+}
+
+.emp_main_top_user_div {
+	position: relative;
+	top: -30px;
+	left: 300px;
+}
+
+.top_nav {
+	width: 1020px;
+	height:95px;
+	margin:5px;
+	background-image: url("../images/bg_05.png");
+}
+
+.top_main {
+    width: 1020px;
+    height:455px;
+    margin:5px;
+    background-image: url("../images/bg_06.png");
+}
+.main_nav_table{
+	width: 100%;
+	height: 100%;
+}
+.main_nav_table td{
+	width: 12.5%;
+	text-align: center;
+}
+.emp_main_bottom_div {
+	background-image: url("../images/bottom_bg.png");
+	background-repeat: repeat-x;
+	width: 1030px;
+	height: 34px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	line-height: 34px;
+	font-size: 12px;
+	color: white;
+}

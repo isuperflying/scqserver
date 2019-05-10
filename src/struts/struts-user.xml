@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="userAction" namespace="/" extends="struts-default">
+	    <action name="userLogin" class="userAction" method="userLogin">
+            <result name="success" type="redirect">/main.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        <action name="register" class="userAction" method="addUser">
+        </action>
+        <action name="toEmpIndex" class="userAction" method="toEmpIndex">
+            <result name="success">/emp_index.jsp</result>
+        </action>
+        <action name="toEmpMain" class="userAction" method="toEmpMain">
+            <result name="success">/emp_main.jsp</result>
+        </action>
+		<action name="loginOut" class="userAction" method="loginOut">
+        </action>
+        <action name="getUserDataList" class="userAction" method="getUserDataList">
+            <result name="success">user/user_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddUser" class="userAction" method="toAdd">
+            <result name="success">user/user_add.jsp</result>
+        </action>
+        <action name="toEditUser" class="userAction" method="toEdit">
+            <result name="success">user/user_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="saveUser" class="userAction" method="saveUser">
+        	<result name="success" type="redirectAction">getUserDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateUser" class="userAction" method="updateUser">
+        	<result name="success" type="redirectAction">getUserDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="deleteUser" class="userAction" method="deleteUser"></action>
+        
+        <!-- 注册用户 -->
+        <action name="registerUser" class="userAction" method="registerUser">
+            <result name="success" type="chain"><param name="actionName">getTrainCourseDataList</param></result>
+            <result name="register">/mobile/register.jsp</result>
+        </action>
+        <action name="userLoginService" class="userAction" method="userLoginService"></action>
+        <action name="findSecurityService" class="userAction" method="findSecurityService"></action>
+        <action name="userRegisterService" class="userAction" method="userRegisterService"></action>
+	</package>
+</struts>

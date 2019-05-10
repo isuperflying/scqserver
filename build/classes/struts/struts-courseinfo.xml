@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="courseInfoAction" namespace="/" extends="struts-default">
+	    <!-- 培训机构-->
+	    <action name="getCourseInfoDataList" class="courseInfoAction" method="getCourseInfoDataList">
+            <result name="success">courseinfo/course_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddCourseInfo" class="courseInfoAction" method="toAdd">
+            <result name="success">courseinfo/course_info_add.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toEditCourseInfo" class="courseInfoAction" method="toEdit">
+            <result name="success">courseinfo/course_info_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="getCourseInfoByPage" class="courseInfoAction" method="getCourseInfoByPage"></action>
+        <action name="saveCourseInfo" class="courseInfoAction" method="saveCourseInfo">
+        	<result name="success" type="redirectAction">getCourseInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateCourseInfo" class="courseInfoAction" method="updateCourseInfo">
+        	<result name="success" type="redirectAction">getCourseInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toCourseInfoInput" class="courseInfoAction" method="toInput">
+            <result name="success">courseinfo/course_info_input.jsp</result>
+        </action>
+        <action name="deleteCourseInfo" class="courseInfoAction" method="deleteCourseInfo"></action>
+        <action name="inputCourseInfoExcel" class="courseInfoAction" method="inputCourseInfoExcel"></action>
+        <action name="getAllMenuTypeByParentNumber" class="courseInfoAction" method="getAllMenuTypeByParentNumber"></action>
+        <action name="mainCourseService" class="courseInfoAction" method="mainCourseService"></action>
+        <action name="findCourseByTrainIdService" class="courseInfoAction" method="findCourseByTrainIdService"></action>
+	</package>
+</struts>

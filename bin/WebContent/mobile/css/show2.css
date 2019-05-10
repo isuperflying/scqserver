@@ -1,0 +1,1436 @@
+.clearfix-b {
+	overflow: hidden
+}
+body {
+	background: #fff
+}
+.icon {
+	font-family: iconfont;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: .2px;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block
+}
+.entry .button-area .button,
+#avatar-crop .button-area .button {
+	text-align: center;
+	height: 1.28rem;
+	float: left;
+	border: 0;
+	font-size: 0;
+	-webkit-border-radius: .12rem;
+	border-radius: .12rem;
+	background: #f7dcbb;
+	border-bottom: .08rem solid #f7dcbb
+}
+.entry .button-area .button:hover b,
+#avatar-crop .button-area .button:hover b {
+	background: #f7dcbb;
+	line-height: 1.3rem
+}
+.entry .button-area .button b,
+#avatar-crop .button-area .button b {
+	background: #ffedd7;
+	color: #927a5c;
+	display: inline-block;
+	width: 100%;
+	line-height: 1.2rem;
+	font-size: .55rem;
+	height: 1.2rem;
+	-webkit-transition: background ease .2s;
+	transition: background ease .2s;
+	-webkit-border-radius: .12rem .12rem .08rem .08rem;
+	border-radius: .12rem .12rem .08rem .08rem;
+	font-weight: 400
+}
+.entry .button-area .button.important,
+#avatar-crop .button-area .button.important {
+	background: #927a5c;
+	border-bottom: .08rem solid #927a5c
+}
+.entry .button-area .button.important:hover b,
+#avatar-crop .button-area .button.important:hover b {
+	background: #927a5c;
+	line-height: 1.3rem
+}
+.entry .button-area .button.important b,
+#avatar-crop .button-area .button.important b {
+	background: #a68b69;
+	color: #fff
+}
+.entry .footer,
+#avatar-crop .footer {
+	padding: 1rem 0 .4rem
+}
+.entry .footer .logo,
+#avatar-crop .footer .logo {
+	display: block;
+	margin: 0 auto;
+	margin-top: .4rem;
+	width: 3.22rem;
+	height: 1.04rem
+}
+.entry .footer .logo img,
+#avatar-crop .footer .logo img {
+	width: 100%;
+	height: 100%;
+	opacity: .6
+}
+.entry .footer .site-link-area,
+#avatar-crop .footer .site-link-area {
+	display: block;
+	padding-top: .8rem;
+	padding-bottom: .4rem
+}
+.entry .footer .site-link-area .site-link,
+#avatar-crop .footer .site-link-area .site-link {
+	width: 3.2rem;
+	height: 1.2rem;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center
+}
+.entry .footer .site-link-area .site-link img,
+#avatar-crop .footer .site-link-area .site-link img {
+	display: inline-block
+}
+.entry .footer .site-link-area .site-link.xljy img,
+#avatar-crop .footer .site-link-area .site-link.xljy img {
+	width: 2.56rem;
+	height: .86rem
+}
+.entry .footer .site-link-area .site-link.shjy img,
+#avatar-crop .footer .site-link-area .site-link.shjy img {
+	width: 2.08rem;
+	height: .46rem
+}
+.entry .footer .site-link-area .site-link.cbn img,
+#avatar-crop .footer .site-link-area .site-link.cbn img {
+	width: 2.04rem;
+	height: .84rem
+}
+.entry .footer .site-link-area .site-link.zgqnb img,
+#avatar-crop .footer .site-link-area .site-link.zgqnb img {
+	width: 1.9rem;
+	height: .86rem
+}
+.entry .footer .text-align-center,
+#avatar-crop .footer .text-align-center {
+	text-align: center
+}
+.entry .footer .join-us-entry,
+#avatar-crop .footer .join-us-entry {
+	font-size: .48rem;
+	padding-bottom: .04rem;
+	border-bottom: 1px solid #fff;
+	color: #fff
+}
+.entry .link-area,
+#avatar-crop .link-area {
+	text-align: center;
+	line-height: 1rem
+}
+.entry .link-a,
+#avatar-crop .link-a {
+	color: rgba(255, 255, 255, .8);
+	font-size: .4rem
+}
+.entry .link-b,
+#avatar-crop .link-b {
+	color: rgba(255, 255, 255, .8);
+	font-size: .48rem;
+	padding-bottom: .06rem;
+	border-bottom: 1px solid #fff
+}
+.entry .link-c,
+#avatar-crop .link-c {
+	color: rgba(255, 255, 255, .8);
+	font-size: .48rem;
+	line-height: 1.8rem;
+	padding-bottom: .06rem;
+	line-height: 2rem;
+	border-bottom: 1px solid #fff
+}
+#envelope {
+	position: relative
+}
+#envelope .inside .layout {
+	position: relative;
+	background: url("../img/envelope_seal_5cbd108.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/envelope_seal_5cbd108.png*/
+	
+	no-repeat center bottom;
+	background-size: 100% auto;
+	overflow: hidden
+}
+#envelope .inside .layout:after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	box-shadow: 0 0 .4rem 2px rgba(0, 0, 0, .4);
+	z-index: 3;
+	width: 100%
+}
+#envelope .inside .paper {
+	position: relative;
+	margin: 0 auto;
+	width: 12.22rem;
+	z-index: 2;
+	overflow: hidden;
+	padding-top: .6rem
+}
+#envelope .inside .paper:before {
+	content: "";
+	display: block;
+	height: 2.2rem;
+	background: url("../img/paper_head_radius_eb63b8f.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/paper_head_radius_eb63b8f.png*/
+	
+	no-repeat center top;
+	background-size: cover
+}
+#envelope .inside .paper:after {
+	content: "";
+	position: absolute;
+	background: url("../img/paper_bg_8ac20c9.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/paper_bg_8ac20c9.png*/
+	
+	no-repeat 0 0;
+	background-size: 100% 100%;
+	top: 2.8rem;
+	width: 100%;
+	bottom: 0;
+	z-index: -1
+}
+#envelope .inside .paper .inner-wrap {
+	position: relative;
+	z-index: 1
+}
+#envelope .inside .paper .inner-wrap .zm-website-entry {
+	background: url("../img/logo_top.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/logo_s_66e8d79.png*/
+	
+	no-repeat center;
+	width: 1.896rem;
+	height: .6rem;
+	content: "";
+	position: absolute;
+	right: .6rem;
+	top: -1.4rem;
+	background-size: cover;
+	font-size: 0
+}
+#envelope .inside .paper .main-title {
+	color: #64523c;
+	font-size: .72rem;
+	text-align: center;
+	line-height: 1rem;
+	margin-top: -.2rem;
+	padding: 0 .6rem
+}
+#envelope .inside .paper .school-affix {
+	position: absolute;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 3;
+	top: 6rem;
+	left: 7.6rem
+}
+#envelope .inside .paper .school-affix.glbydx {
+	background-image: url("../img/school_logos/glbydx_266d563.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/glbydx_266d563.png*/
+	
+	;
+	width: 5.02rem;
+	height: 4.66rem
+}
+#envelope .inside .paper .school-affix.bdqn {
+	background-image: url("../img/school_logos/bdqn_da7161f.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/bdqn_da7161f.png*/
+	
+	;
+	width: 4.38rem;
+	height: 1.82rem
+}
+#envelope .inside .paper .school-affix.bjdx {
+	background-image: url("../img/school_logos/bjdx_3a05265.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/bjdx_3a05265.png*/
+	
+	;
+	width: 4.66rem;
+	height: 4.46rem
+}
+#envelope .inside .paper .school-affix.bjdyxy {
+	background-image: url("../img/school_logos/bjdyxy_5c3575a.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/bjdyxy_5c3575a.png*/
+	
+	;
+	width: 3.52rem;
+	height: 2rem
+}
+#envelope .inside .paper .school-affix.bllmfxy {
+	background-image: url("../img/school_logos/bllmfxy_78e1694.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/bllmfxy_78e1694.png*/
+	
+	;
+	width: 4.54rem;
+	height: 1.52rem
+}
+#envelope .inside .paper .school-affix.dglgdx {
+	background-image: url("../img/school_logos/dglgdx_6f6d4c5.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/dglgdx_6f6d4c5.png*/
+	
+	;
+	width: 3.7rem;
+	height: 4.1rem
+}
+#envelope .inside .paper .school-affix.gsdx {
+	background-image: url("../img/school_logos/gsdx_852f38e.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/gsdx_852f38e.png*/
+	
+	;
+	width: 3.76rem;
+	height: 4.12rem
+}
+#envelope .inside .paper .school-affix.fddx {
+	background-image: url("../img/school_logos/fddx_c2600c9.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/fddx_c2600c9.png*/
+	
+	;
+	width: 4.24rem;
+	height: 4.26rem
+}
+#envelope .inside .paper .school-affix.hfdx {
+	background-image: url("../img/school_logos/hfdx_6395f8f.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/hfdx_6395f8f.png*/
+	
+	;
+	width: 5.16rem;
+	height: 4.98rem
+}
+#envelope .inside .paper .school-affix.hgwcmfxx {
+	background-image: url("../img/school_logos/hgwcmfxx_27698a0.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/hgwcmfxx_27698a0.png*/
+	
+	;
+	width: 2.96rem;
+	height: 3.12rem
+}
+#envelope .inside .paper .school-affix.hjxy {
+	background-image: url("../img/school_logos/hjxy_25d074a.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/hjxy_25d074a.png*/
+	
+	;
+	width: 4.86rem;
+	height: 1.34rem
+}
+#envelope .inside .paper .school-affix.jlddx {
+	background-image: url("../img/school_logos/jldzdx_7245c5b.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/jldzdx_7245c5b.png*/
+	
+	;
+	width: 3.52rem;
+	height: 3.74rem
+}
+#envelope .inside .paper .school-affix.jtdx {
+	background-image: url("../img/school_logos/jtdx_78a0783.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/jtdx_78a0783.png*/
+	
+	;
+	width: 4.24rem;
+	height: 4.24rem
+}
+#envelope .inside .paper .school-affix.knjdx {
+	background-image: url("../img/school_logos/knjdx_8320e61.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/knjdx_8320e61.png*/
+	
+	;
+	width: 4.8rem;
+	height: 4.78rem
+}
+#envelope .inside .paper .school-affix.lddx {
+	background-image: url("../img/school_logos/lddx_6ba5f0e.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/lddx_6ba5f0e.png*/
+	
+	;
+	width: 3.02rem;
+	height: 3.76rem
+}
+#envelope .inside .paper .school-affix.njdx {
+	background-image: url("../img/school_logos/njdx_8f80653.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/njdx_8f80653.png*/
+	
+	;
+	width: 3.16rem;
+	height: 3.72rem
+}
+#envelope .inside .paper .school-affix.low {
+	background-image: url("../img/school_logos/low_7756060.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/low_7756060.png*/
+	
+	;
+	width: 3.72rem;
+	height: 2.3rem
+}
+#envelope .inside .paper .school-affix.lx {
+	background-image: url("../img/school_logos/lx_d7c2370.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/lx_d7c2370.png*/
+	
+	;
+	width: 2.88rem;
+	height: 3.16rem
+}
+#envelope .inside .paper .school-affix.mtczxfdb {
+	background-image: url("../img/school_logos/mtczxfdb_7707348.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/mtczxfdb_7707348.png*/
+	
+	;
+	width: 4.26rem;
+	height: 1.4rem
+}
+#envelope .inside .paper .school-affix.qhdx {
+	background-image: url("../img/school_logos/qhdx_f9e8796.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/qhdx_f9e8796.png*/
+	
+	;
+	width: 4.26rem;
+	height: 4.24rem
+}
+#envelope .inside .paper .school-affix.sadlsdx {
+	background-image: url("../img/school_logos/sadlsdx_703b308.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/sadlsdx_703b308.png*/
+	
+	;
+	width: 3.16rem;
+	height: 3.74rem
+}
+#envelope .inside .paper .school-affix.sdxhdnxy {
+	background-image: url("../img/school_logos/sdxhdnxy_f5d4735.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/sdxhdnxy_f5d4735.png*/
+	
+	;
+	width: 3.8rem;
+	height: 3.8rem
+}
+#envelope .inside .paper .school-affix.sls {
+	background-image: url("../img/school_logos/sls_b608594.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/sls_b608594.png*/
+	
+	;
+	width: 3.26rem;
+	height: 4.42rem
+}
+#envelope .inside .paper .school-affix.tgxy {
+	background-image: url("../img/school_logos/tgxy_4c8a303.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/tgxy_4c8a303.png*/
+	
+	;
+	width: 3.48rem;
+	height: 4.68rem;
+	left: 7.2rem;
+	top: 5rem
+}
+#envelope .inside .paper .school-affix.xdfprxx {
+	background-image: url("../img/school_logos/xdfprxx_e548c04.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/xdfprxx_e548c04.png*/
+	
+	;
+	width: 3.88rem;
+	height: 3.88rem
+}
+#envelope .inside .paper .school-affix.xmdx {
+	background-image: url("../img/school_logos/xmdx_a103ecf.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/xmdx_a103ecf.png*/
+	
+	;
+	width: 3.98rem;
+	height: 4.04rem
+}
+#envelope .inside .paper .school-affix.zgcmdx {
+	background-image: url("../img/school_logos/zgcmdx_6c63775.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zgcmdx_6c63775.png*/
+	
+	;
+	width: 3.96rem;
+	height: 3.96rem
+}
+#envelope .inside .paper .school-affix.zgmsxy {
+	background-image: url("../img/school_logos/zgmsxy_f15442f.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zgmsxy_f15442f.png*/
+	
+	;
+	width: 4.16rem;
+	height: 2.54rem
+}
+#envelope .inside .paper .school-affix.zhnzxy {
+	background-image: url("../img/school_logos/zhnzxy.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zhnzxy.png*/
+	
+	;
+	width: 3.9rem;
+	height: 3.9rem
+}
+#envelope .inside .paper .school-affix.zjdx {
+	background-image: url("../img/school_logos/zjdx_df90db8.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zjdx_df90db8.png*/
+	
+	;
+	width: 4.26rem;
+	height: 4.26rem
+}
+#envelope .inside .paper .school-affix.zymzdx {
+	background-image: url("../img/school_logos/zymzdx_0fbd5ab.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zymzdx_0fbd5ab.png*/
+	
+	;
+	width: 3.88rem;
+	height: 3.88rem
+}
+#envelope .inside .paper .school-affix.zyxjxy {
+	background-image: url("../img/school_logos/zyxjxy_fd5fd1b.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zyxjxy_fd5fd1b.png*/
+	
+	;
+	width: 2.96rem;
+	height: 2.96rem
+}
+#envelope .inside .paper .school-affix.zgyyxy {
+	background-image: url("../img/school_logos/zgyyxy_ebee94a.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zgyyxy_ebee94a.png*/
+	
+	;
+	width: 3.8rem;
+	height: 3.8rem
+}
+#envelope .inside .paper .school-affix.zhnzxx {
+	background-image: url("../img/school_logos/zhnzxx_529b54e.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zhnzxx_529b54e.png*/
+	
+	;
+	width: 3.9rem;
+	height: 3.9rem
+}
+#envelope .inside .paper .school-affix.zjdx {
+	background-image: url("../img/school_logos/zjdx_df90db8.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zjdx_df90db8.png*/
+	
+	;
+	width: 4.26rem;
+	height: 4.26rem
+}
+#envelope .inside .paper .school-affix.zjjrzxxy {
+	background-image: url("../img/school_logos/zjjrzxxy_4516e41.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zjjrzxxy_4516e41.png*/
+	
+	;
+	width: 4.08rem;
+	height: 4.1rem
+}
+#envelope .inside .paper .school-affix.zymzdx {
+	background-image: url("../img/school_logos/zymzdx_0fbd5ab.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zymzdx_0fbd5ab.png*/
+	
+	;
+	width: 3.88rem;
+	height: 3.88rem
+}
+#envelope .inside .paper .school-affix.zyxjxy {
+	background-image: url("../img/school_logos/zyxjxy_fd5fd1b.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zyxjxy_fd5fd1b.png*/
+	
+	;
+	width: 2.96rem;
+	height: 2.96rem
+}
+#envelope .inside .paper .school-affix.zgfxy,
+#envelope .inside .paper .school-affix.hebfxy {
+	background-image: url("../img/school_logos/fxy_0fc8eb6.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/fxy_0fc8eb6.png*/
+	
+	;
+	width: 3.8rem;
+	height: 1.42rem
+}
+#envelope .inside .paper .school-affix.bjsfdx {
+	background-image: url("../img/school_logos/bjsfdx_fee5eb6.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/bjsfdx_fee5eb6.png*/
+	
+	;
+	width: 4.1rem;
+	height: 3.7rem
+}
+#envelope .inside .paper .school-affix.nanjundx {
+	background-image: url("../img/school_logos/nanjundx_277b99f.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/nanjundx_277b99f.png*/
+	
+	;
+	width: 3.3rem;
+	height: 4rem
+}
+#envelope .inside .paper .school-affix.szdx {
+	background-image: url("../img/school_logos/szdx_97be1ef.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/szdx_97be1ef.png*/
+	
+	;
+	width: 4.26rem;
+	height: 4.22rem
+}
+#envelope .inside .paper .school-affix.wdsxy {
+	background-image: url("../img/school_logos/wdsxy_d1ba905.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/wdsxy_d1ba905.png*/
+	
+	;
+	width: 3.96rem;
+	height: 3.68rem
+}
+#envelope .inside .paper .school-affix.whdx {
+	background-image: url("../img/school_logos/whdx_0acf804.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/whdx_0acf804.png*/
+	
+	;
+	width: 3.46rem;
+	height: 3.58rem
+}
+#envelope .inside .paper .school-affix.zgdzdx {
+	background-image: url("../img/school_logos/zgdzdx_14acfb6.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zgdzdx_14acfb6.png*/
+	
+	;
+	width: 3.94rem;
+	height: 3.8rem
+}
+#envelope .inside .paper .school-affix.zgsydx {
+	background-image: url("../img/school_logos/zgsydx_7adc0c1.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zgsydx_7adc0c1.png*/
+	
+	;
+	width: 4.04rem;
+	height: 4.06rem
+}
+#envelope .inside .paper .school-affix.zsdx {
+	background-image: url("../img/school_logos/zsdx_434c12f.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/school_logos/zsdx_434c12f.png*/
+	
+	;
+	width: 3.96rem;
+	height: 3.96rem
+}
+#envelope .inside .paper .avatar-area {
+	padding: .8rem 0;
+	display: block
+}
+#envelope .inside .paper .avatar-area .avatar {
+	width: 6.52rem;
+	height: 6.52rem;
+	border: .04rem solid #d0d0d0;
+	margin: 0 auto;
+	position: relative
+}
+#envelope .inside .paper .avatar-area .avatar:after {
+	position: absolute;
+	content: "";
+	width: .32rem;
+	height: .32rem;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	left: 50%;
+	margin-left: -.16rem;
+	bottom: -.16rem;
+	background: #d0d0d0
+}
+#envelope .inside .paper .avatar-area .avatar,
+#envelope .inside .paper .avatar-area .avatar b {
+	-webkit-border-radius: 100%;
+	border-radius: 100%
+}
+#envelope .inside .paper .avatar-area .avatar b {
+	display: block;
+	border: .3rem solid #fff;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center
+}
+#envelope .inside .paper .score-area .rp-score {
+	font-size: 0;
+	background: url("../img/yanzhi.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/text_t0_80bcf43.png*/
+	
+	;
+	background-size: cover;
+	width: 3.7rem;
+	height: .8rem;
+	margin: 0 auto
+}
+#envelope .inside .paper .score-area .rp-score .score {
+	display: block;
+	margin-left: 1.8rem;
+	white-space: nowrap
+}
+#envelope .inside .paper .score-area .rp-score .score .num,
+#envelope .inside .paper .score-area .rp-score .score .unit {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-0 {
+	background-image: url("../img/max_0.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/0_2019e97.png*/
+	
+	;
+	width: .3rem;
+	height: .4rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-1 {
+	background-image: url("../img/max_1.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/1_711d134.png*/
+	
+	;
+	width: .14rem;
+	height: .4rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-2 {
+	background-image: url("../img/max_2.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/2_d9b6e01.png*/
+	
+	;
+	width: .26rem;
+	height: .4rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-3 {
+	background-image: url("../img/max_3.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/3_a35497d.png*/
+	
+	;
+	width: .28rem;
+	height: .42rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-4 {
+	background-image: url("../img/max_4.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/4_7d8723d.png*/
+	
+	;
+	width: .34rem;
+	height: .36rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-5 {
+	background-image: url("../img/max_5.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/5_430f36d.png*/
+	
+	;
+	width: .24rem;
+	height: .38rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-6 {
+	background-image: url("../img/max_6.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/6_2d78b56.png*/
+	
+	;
+	width: .3rem;
+	height: .46rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-7 {
+	background-image: url("../img/max_7.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/7_0ff5440.png*/
+	
+	;
+	width: .28rem;
+	height: .38rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-8 {
+	background-image: url("../img/max_8.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/8_c58c2eb.png*/
+	
+	;
+	width: .26rem;
+	height: .42rem
+}
+#envelope .inside .paper .score-area .rp-score .score .num.n-9 {
+	background-image: url("../img/max_9.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/9_dc3f1de.png*/
+	
+	;
+	width: .3rem;
+	height: .42rem
+}
+#envelope .inside .paper .score-area .rp-score .score .unit {
+	background-image: url("../img/fen.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/text_t4_510b2ad.png*/
+	
+	;
+	width: 1.08rem;
+	height: .64rem;
+	margin-left: .1rem
+}
+#envelope .inside .paper .score-area .defeat-score {
+	font-size: 0;
+	text-align: center;
+	padding-top: .1rem;
+	white-space: nowrap
+}
+#envelope .inside .paper .score-area .defeat-score .text-0,
+#envelope .inside .paper .score-area .defeat-score .text-1,
+#envelope .inside .paper .score-area .defeat-score .text-2 {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+#envelope .inside .paper .score-area .defeat-score .text-0 {
+	background-image: url("../img/jibai.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/text_t1_1ee07bc.png*/
+	
+	;
+	width: 2.2rem;
+	height: .74rem
+}
+#envelope .inside .paper .score-area .defeat-score .score {
+	display: inline-block;
+	margin: 0 .1rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num,
+#envelope .inside .paper .score-area .defeat-score .score .unit {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-0 {
+	background-image: url("../img/min_0.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/0-1_9b95d01.png*/
+	
+	;
+	width: .22rem;
+	height: .3rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-1 {
+	background-image: url("../img/min_1.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/1-1_b419a21.png*/
+	
+	;
+	width: .1rem;
+	height: .3rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-2 {
+	background-image: url("../img/min_2.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/2-1_0d8c90d.png*/
+	
+	;
+	width: .18rem;
+	height: .28rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-3 {
+	background-image: url("../img/min_3.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/3-1_7f4c8b6.png*/
+	
+	;
+	width: .2rem;
+	height: .32rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-4 {
+	background-image: url("../img/min_4.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/4-1_67c1726.png*/
+	
+	;
+	width: .26rem;
+	height: .26rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-5 {
+	background-image: url("../img/min_5.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/5-1_369c082.png*/
+	
+	;
+	width: .16rem;
+	height: .28rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-6 {
+	background-image: url("../img/min_6.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/6-1_d001cf7.png*/
+	
+	;
+	width: .22rem;
+	height: .34rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-7 {
+	background-image: url("../img/min_7.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/7-1_3a1e877.png*/
+	
+	;
+	width: .2rem;
+	height: .28rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-8 {
+	background-image: url("../img/min_8.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/8-1_3e3d9b5.png*/
+	
+	;
+	width: .18rem;
+	height: .32rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .num.n-9 {
+	background-image: url("../img/min_9.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/nums/9-1_b8b148a.png*/
+	
+	;
+	width: .22rem;
+	height: .3rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .point {
+	font-size: .4rem;
+	color: #da3c3e;
+	position: relative;
+	top: .16rem;
+	margin: 0 .06rem;
+	margin-left: -.04rem
+}
+#envelope .inside .paper .score-area .defeat-score .score .unit {
+	background-image: url("../img/percent.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/text_t2_8e33ada.png*/
+	
+	;
+	width: .5rem;
+	height: .74rem;
+	margin-left: -.1rem
+}
+#envelope .inside .paper .score-area .defeat-score .text-1 {
+	background-image: url("../img/student_bg.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/text_t3_eb0c3fa.png*/
+	
+	;
+	width: 2.4rem;
+	height: .74rem
+}
+#envelope .inside .paper .target-school {
+	text-align: center;
+	padding-top: .4rem;
+	padding-bottom: 1rem
+}
+#envelope .inside .paper .target-school .label {
+	display: inline-block;
+	line-height: 1rem;
+	line-height: .96rem;
+	border: 1px solid #4d4243;
+	padding: 0 .3rem;
+	font-size: .48rem;
+	font-weight: 700
+}
+#envelope .inside .paper .target-school .label_jxj {
+	display: inline-block;
+	line-height: 1rem;
+	line-height: .96rem;
+	border: 1px solid #FF0000;
+	padding: 0 .3rem;
+	font-size: .48rem;
+	font-weight: 700;
+	margin-top: 10px;
+}
+#envelope .inside .paper .target-school .comment {
+	padding-top: .8rem;
+	font-size: .58rem;
+	line-height: .8rem;
+	color: 2e2e2e
+}
+#envelope .outside {
+	position: relative
+}
+#envelope .outside .layout {
+	border-top: 1px solid #a68c6c;
+	border-bottom: 1px solid #a68c6c;
+	background: url("../img/envelope_bg_24a2d52.gif")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/envelope_bg_24a2d52.gif*/
+	
+	#c5a781 repeat;
+	z-index: 3;
+	position: relative;
+	box-shadow: 0 0 .08rem 1px rgba(0, 0, 0, .3)
+}
+#envelope .outside .entry {
+	padding-top: .1rem;
+	padding-bottom: .2rem;
+	height: 60%;
+}
+#envelope .outside .entry .button-area {
+	width: 8rem;
+	margin: 0 auto
+}
+#envelope .outside .entry .button-area .button {
+	width: 100%;
+	float: none;
+	display: block;
+	margin-bottom: .3rem
+}
+ .button-area .button.upload .icon,
+#envelope .outside .entry .button-area .button.upload span {
+	display: inline-block;
+	vertical-align: middle
+}
+#envelope .outside .entry .button-area .button.upload .icon {
+	font-size: .48rem;
+	width: .48rem;
+	height: .48rem;
+	line-height: .48rem;
+	margin-right: .1rem
+}
+#envelope .outside .entry .intro {
+	text-align: center;
+	margin-top: .1rem;
+	margin-bottom: .1rem;
+}
+#envelope .outside .entry .intro h2 {
+	line-height: 1rem;
+	font-size: .4rem;
+	color: rgba(255, 255, 255, .8)
+}
+#envelope .outside .entry .intro .tip {
+	text-align: center;
+	color: #fff;
+	font-size: .55rem
+}
+#envelope .outside .entry .intro .tip:before,
+#envelope .outside .entry .intro .tip:after {
+	content: "";
+	border: 0 solid transparent;
+	border-width: .16rem 0 .16rem .16rem;
+	border-left-color: #fff;
+	display: inline-block;
+	vertical-align: middle
+}
+#envelope .outside .entry .intro .tip:after {
+	border-width: .16rem .16rem .16rem 0;
+	border-right-color: #fff
+}
+#envelope .outside .entry .intro .tip b {
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 .1rem
+}
+#envelope .outside .entry .intro .weibo-entry {
+	
+	text-align: center;
+	-webkit-animation: bounchAnima ease 1.4s infinite;
+	animation: bounchAnima ease 1.4s infinite
+}
+#envelope .outside .entry .intro .weibo-entry a {
+	font-size: .4rem;
+	color: #fff
+}
+#envelope .outside .entry .intro .couter {
+	font-size: .4rem;
+	color: #8c7558;
+	line-height: 1rem
+}
+#envelope .outside .entry .intro .senior-entry {
+	display: inline-block;
+	margin-top: 1.2rem;
+	margin-bottom: .8rem;
+	font-size: .6rem;
+	font-weight: 700;
+	padding-bottom: .06rem;
+	color: #fff;
+	-webkit-animation: bounchAnima ease 1s infinite;
+	animation: bounchAnima ease 1s infinite
+}
+.table-layout {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%
+}
+.table-layout .table-row {
+	display: table-row;
+	width: 100%;
+	height: 100%
+}
+.table-layout .table-col {
+	display: table-cell;
+	width: 100%;
+	height: 100%
+}
+#avatar-crop {
+	-webkit-user-select: none;
+	user-select: none;
+	display: none
+}
+#avatar-crop .crop-title {
+	display: block;
+	text-align: center;
+	font-size: .8rem;
+	height: 2rem;
+	margin-top: -2rem;
+	line-height: 2rem;
+	color: #4d4f52
+}
+#avatar-crop .crop-container {
+	vertical-align: middle;
+	padding: 2rem 0 0rem
+}
+#avatar-crop .crop-container .crop {
+	width: 7.6rem;
+	height: 7.6rem;
+	margin: 0 auto;
+	-webkit-border-radius: .08rem;
+	border-radius: .08rem;
+	position: relative;
+	z-index: 1
+}
+#avatar-crop .crop-container .crop.is-empty .image-crop-container {
+	display: none
+}
+#avatar-crop .crop-container .crop.is-empty .no-image-tip {
+	display: table-cell
+}
+#avatar-crop .crop-container .crop.is-empty .sub-title {
+	display: block
+}
+#avatar-crop .crop-container .crop .image-crop-container {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0
+}
+#avatar-crop .crop-container .crop .sub-title {
+	position: absolute;
+	top: -1.2rem;
+	color: #fff;
+	font-size: .52rem;
+	width: 12.8rem;
+	left: 50%;
+	margin-left: -6.4rem;
+	text-align: center;
+	text-shadow: 1px 1px .04rem rgba(0, 0, 0, .5);
+	display: none
+}
+#avatar-crop .crop-container .crop .no-image-tip {
+	position: relative;
+	background: #f2f2f2;
+	width: 7.6rem;
+	height: 7.6rem;
+	vertical-align: middle;
+	text-align: center;
+	font-size: .48rem;
+	color: rgba(0, 0, 0, .4);
+	display: none;
+	box-shadow: 0 0 .06rem 0 rgba(0, 0, 0, .1);
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	cursor: pointer
+}
+#avatar-crop .crop-container .crop .no-image-tip .icon {
+	display: block;
+	width: 2.56rem;
+	height: 2.56rem;
+	font-size: 2.56rem;
+	margin: 0 auto;
+	margin-bottom: .4rem;
+	opacity: .2;
+	color: #000
+}
+#avatar-crop .crop-container .crop .crop-area,
+#avatar-crop .crop-container .crop .crop-area:after,
+#avatar-crop .crop-container .crop .crop-area .dragable {
+	-webkit-border-radius: 100%;
+	border-radius: 100%
+}
+#avatar-crop .crop-container .zoom-control {
+	width: 8rem;
+	margin: 0 auto;
+	padding: 1.2rem .4rem .6rem;
+	position: relative;
+	z-index: 9999
+}
+#avatar-crop .crop-container .zoom-control .title {
+	color: #fff;
+	font-size: .4rem;
+	text-align: center;
+	display: block;
+	font-weight: 400
+}
+#avatar-crop .crop-container .zoom-control .title i,
+#avatar-crop .crop-container .zoom-control .title span {
+	vertical-align: middle;
+	display: inline-block
+}
+#avatar-crop .crop-container .zoom-control .title i {
+	width: .5rem;
+	height: .52rem;
+	background: url("../img/dragdrop_e4d0c39.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/dragdrop_e4d0c39.png*/
+	
+	no-repeat center;
+	background-size: cover;
+	margin-right: .1rem
+}
+#avatar-crop .crop-container .zoom-control .range-control {
+	padding: .2rem .8rem
+}
+#avatar-crop .crop-container .zoom-control .range-control:before,
+#avatar-crop .crop-container .zoom-control .range-control:after {
+	display: table;
+	content: "";
+	line-height: 0;
+	height: 0;
+	vertical-align: baseline
+}
+#avatar-crop .crop-container .zoom-control .range-control:after {
+	clear: both
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control,
+#avatar-crop .crop-container .zoom-control .range-control .range-bar-control {
+	float: left
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control {
+	display: block;
+	width: .8rem
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control.zoom-in {
+	text-align: left;
+	margin-left: -.8rem
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control.zoom-out {
+	text-align: right;
+	margin-right: -.8rem
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control .button,
+#avatar-crop .crop-container .zoom-control .range-control .button-control .icon {
+	width: .48rem;
+	height: .48rem;
+	line-height: .48rem
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control .button {
+	display: inline-block;
+	background-color: transparent;
+	border: 0;
+	transition: all ease .2s;
+	-webkit-transition: all ease .2s
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control .button:hover {
+	color: #fff
+}
+#avatar-crop .crop-container .zoom-control .range-control .button-control .icon {
+	font-size: .48rem;
+	color: #ffedd7
+}
+#avatar-crop .crop-container .zoom-control .range-control .range-bar-control {
+	width: 100%;
+	height: .48rem;
+	position: relative
+}
+#avatar-crop .crop-container .zoom-control .range-control .range-bar-control:after {
+	content: "";
+	display: block;
+	background: #f7d0a2;
+	height: .08rem;
+	margin-top: .2rem;
+	-webkit-border-radius: .08rem;
+	border-radius: .08rem
+}
+#avatar-crop .crop-container .zoom-control .range-control .range-bar-control .dragable {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -.24rem;
+	margin-left: -.24rem;
+	width: .48rem;
+	height: .48rem;
+	background: #ffddb5;
+	-webkit-border-radius: 100%;
+	border-radius: 100%
+}
+#avatar-crop .crop-container .zoom-control .range-control .range-bar-control .dragable:after {
+	position: absolute;
+	content: "";
+	width: .08rem;
+	height: .12rem;
+	background: #e0bb90;
+	-webkit-border-radius: .08rem;
+	border-radius: .08rem;
+	top: .1rem;
+	right: .1rem;
+	-webkit-transform: rotate(-30deg);
+	transform: rotate(-30deg)
+}
+#avatar-crop .crop-container .button-area {
+	padding-top: 1rem;
+	width: 8rem;
+	margin: 0 auto
+}
+#avatar-crop .crop-container .button-area:before,
+#avatar-crop .crop-container .button-area:after {
+	display: table;
+	content: "";
+	line-height: 0;
+	height: 0;
+	vertical-align: baseline
+}
+#avatar-crop .crop-container .button-area:after {
+	clear: both
+}
+#avatar-crop .crop-container .button-area .button {
+	width: 3.6rem;
+	margin: 0 .2rem
+}
+#avatar-crop .crop-container .button-area .button.reload {
+	position: relative
+}
+#avatar-crop .file-picker {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+	border: 0;
+	outline: 0!important;
+	-webkit-appearance: button
+}
+#file-picker-control {
+	position: absolute;
+	top: -99999px;
+	left: -99999px
+}
+#share-step-tip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .7);
+	z-index: 99;
+	display: none
+}
+#share-step-tip.show {
+	display: block
+}
+#share-step-tip:after {
+	position: absolute;
+	top: .1rem;
+	right: .9rem;
+	content: "";
+	background: url("../img/tip-arrow_7c6bebe.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/tip-arrow_7c6bebe.png*/
+	
+	no-repeat center;
+	background-size: 100%;
+	width: 3.3rem;
+	height: 2.6rem
+}
+.fuck {
+	font-size: .48rem;
+	color: rgba(255, 255, 255, .6);
+	text-align: center;
+	padding-top: .6rem
+}
+.course-packs {
+	width: 11.74rem;
+	height: 10.34rem;
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 0 .4rem;
+	position: relative
+}
+.course-packs img {
+	width: 100%;
+	height: 100%
+}
+.course-packs .senior-two {
+	position: absolute;
+	width: 4.6rem;
+	height: 4.8rem;
+	top: 1.3rem;
+	left: .6rem;
+	-webkit-transform: rotate(10deg);
+	transform: rotate(10deg)
+}
+.course-packs .senior-two-t {
+	position: absolute;
+	width: 5.8rem;
+	height: 1.1rem;
+	top: 2.04rem;
+	right: 0rem;
+	background-color: transparent
+}
+.course-packs .senior-three {
+	position: absolute;
+	width: 4.6rem;
+	height: 4.8rem;
+	bottom: .6rem;
+	right: .7rem;
+	-webkit-transform: rotate(10deg);
+	transform: rotate(10deg);
+	background-color: transparent
+}
+.course-packs .senior-three-t {
+	position: absolute;
+	width: 5.8rem;
+	height: 1.1rem;
+	bottom: 1.3rem;
+	left: 0rem;
+	background-color: transparent
+}
+.footer-x {
+	padding-top: 1rem;
+	padding-bottom: .4rem;
+	margin-bottom: -3.2rem
+}
+.footer-x .zm-ren {
+	display: block;
+	width: 11.26rem;
+	height: 8.4rem;
+	background: url("../img/zm_ren_0f21a63.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/zm_ren_0f21a63.png*/
+	
+	no-repeat center;
+	background-size: cover;
+	margin: 0 auto
+}
+.footer-x .logo {
+	display: block;
+	background: url("../img/logo_bottom.png")
+	/*tpa=http://wechat.zmlearn.com/static/mobile/static/game/university-offer/img/logo_x_fd720f2.png*/
+	
+	no-repeat center;
+	background-size: cover;
+	width: 113px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: .4rem
+}
+@keyframes bounchAnima {
+	0% {
+		opacity: .8;
+		transform: scale(0.98)
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1)
+	}
+	100% {
+		opacity: .8;
+		transform: scale(0.98)
+	}
+}
+@-webkit-keyframes bounchAnima {
+	0% {
+		opacity: .8;
+		-webkit-transform: scale(0.98)
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1)
+	}
+	100% {
+		opacity: .8;
+		-webkit-transform: scale(0.98)
+	}
+}

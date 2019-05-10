@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="examInfoAction" namespace="/" extends="struts-default">
+	    <!-- 培训机构-->
+	    <action name="getExamInfoDataList" class="examInfoAction" method="getExamInfoDataList">
+            <result name="success">examinfo/exam_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddExamInfo" class="examInfoAction" method="toAdd">
+            <result name="success">examinfo/exam_info_add.jsp</result>
+        </action>
+        <action name="toExamInfoInput" class="examInfoAction" method="toInput">
+            <result name="success">examinfo/exam_info_input.jsp</result>
+        </action>
+        <action name="toEditExamInfo" class="examInfoAction" method="toEdit">
+            <result name="success">examinfo/exam_info_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="getExamInfoByPage" class="examInfoAction" method="getExamInfoByPage"></action>
+        <action name="saveExamInfo" class="examInfoAction" method="saveExamInfo">
+        	<result name="success" type="redirectAction">getExamInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateExamInfo" class="examInfoAction" method="updateExamInfo">
+        	<result name="success" type="redirectAction">getExamInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="deleteExamInfo" class="examInfoAction" method="deleteExamInfo"></action>
+        <action name="inputExamInfoExcel" class="examInfoAction" method="inputExamInfoExcel"></action>
+        <action name="getAllCityByProvinceId" class="examInfoAction" method="getAllCityByProvinceId"></action>
+        <action name="getAllAreaByCityId" class="examInfoAction" method="getAllAreaByCityId"></action>
+        <action name="findTrainService" class="examInfoAction" method="findTrainService"></action>
+        <action name="inputExamFile" class="examInfoAction" method="inputExamFile"></action>
+        
+        <action name="examFileDownLoad" class="examInfoAction">
+            <result name="success" type="stream">  
+                <param name="contentType">text/plain</param>  
+                <param name="contentDisposition">attachment;fileName="${fileName}"</param>
+                <param name="inputName">downloadFile</param>
+                <param name="bufferSize">1024</param>
+            </result>  
+        </action> 
+        <action name="saveUserExamState" class="examInfoAction" method="saveUserExamState"></action>
+	</package>
+</struts>

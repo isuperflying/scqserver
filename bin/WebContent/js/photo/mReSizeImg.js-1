@@ -1,0 +1,242 @@
+(function(window, document, exportName, undefined) {
+	//
+	var MAX_HEIGHT = 1000;
+	var mReSizeImg = function(){};
+
+	mReSizeImg.prototype = {
+		photoContainer:{},
+		photoSizeData:{},
+		init:function(){
+			var that=this;
+			this.photoSizeData = new mPinchResize(this.photoContainer.find("img"));
+			this.photoSizeData.photo = this.photoContainer.find("img");
+			this.photoSizeData.onModifyComplete(function(photoData){
+				that.onModifyComplete(photoData);
+			})
+			this.photoSizeData.init();
+
+			//缁戝畾input change浜嬩欢
+			this.photoContainer.find('input[type=file]').unbind("change").on("change",function(){
+				$(this).hide();
+				that2=that;
+				photoContainer=that.photoContainer;
+				photoSizeData=that.photoSizeData;
+				var file = this.files[0];
+				if(file){
+					//楠岃瘉鍥剧墖鏂囦欢绫诲瀷
+					if(file.type && !/image/i.test(file.type)){
+						return false;
+					}
+					var reader = new FileReader();
+					reader.onload = function(e){
+						//readAsDataURL鍚庢墽琛宱nload锛岃繘鍏ュ浘鐗囧帇缂╅€昏緫
+						//e.target.result寰楀埌鐨勫氨鏄浘鐗囨枃浠剁殑base64 string
+						render(file,e.target.result);  
+					};
+					//浠ataurl鐨勫舰寮忚鍙栧浘鐗囨枃浠�
+					reader.readAsDataURL(file);
+					
+				}
+			});
+		},
+		remove:function(){
+			this.photoContainer.find('input').show();
+			this.photoContainer.find('img').attr('src','../../images/empty.png');
+			this.photoContainer.find('img').css("transform","");
+			this.photoSizeData.reset();
+			//this.photoContainer.find('img').remove();
+			//this.photoContainer.prepend('<img src="../../images/empty.png">');
+		},
+		zoomIn:function(){
+			this.photoSizeData.pinchResize(0,0,1.2,0,0);
+		},
+		zoomOut:function(){
+			this.photoSizeData.pinchResize(0,0,0.8,0,0);
+		},
+		rotate:function(d){
+			this.photoSizeData.pinchResize(0,0,1,10*d,0);
+		},
+		onBegin:function(fn){
+			if(typeof(fn)=='function'){
+				this.onBegin=fn;
+			}
+		},
+		onModifyComplete:function(fn){
+			if(typeof(fn)=='function'){
+				this.onModifyComplete=fn;
+			}
+		},
+		onUploadComplete:function(fn){
+			if(typeof(fn)=='function'){
+				this.onUploadComplete=fn;
+			}
+		},
+	}
+	
+	function render(file,src){
+		EXIF.getData(file,function(){
+			//鑾峰彇鐓х墖鏈韩鐨凮rientation
+			var orientation = EXIF.getTag(this, "Orientation");
+			var image = new Image();
+			image.onload = function(){
+				var cvs = photoContainer.find('canvas')[0];
+				var w = image.width;
+				var h = image.height;
+				//璁＄畻鍘嬬缉鍚庣殑鍥剧墖闀垮拰瀹�
+				if(h>MAX_HEIGHT){
+					w *= MAX_HEIGHT/h;
+					h = MAX_HEIGHT;
+				}
+				//console.log(w);
+				//浣跨敤MegaPixImage灏佽鐓х墖鏁版嵁
+				var mpImg = new MegaPixImage(file);
+				//鎸夌収Orientation鏉ュ啓鍏ュ浘鐗囨暟鎹紝鍥炶皟鍑芥暟鏄笂浼犲浘鐗囧埌鏈嶅姟鍣�
+				mpImg.render(cvs, {maxWidth:w,maxHeight:h,orientation:orientation}, rendered);
+			};
+			image.src = src;
+		});
+	}
+	
+	function rendered(a){
+		var cvs = photoContainer.find('canvas')[0];;
+		//璋冪敤Canvas鐨則oDataURL鎺ュ彛锛屽緱鍒扮殑鏄収鐗囨枃浠剁殑base64缂栫爜string
+		var data = cvs.toDataURL("image/jpeg");
+		img=photoContainer.find('img');
+		img.attr("src",data);
+
+		preImgResize(img)
+	}
+
+	//鎶婄敓鎴愮殑鍥剧墖鏄剧ず涓洪€傚綋鐨勬瘮渚�
+	function preImgResize(img){
+		imgW=photoContainer.find('canvas').width();
+		imgH=photoContainer.find('canvas').height();
+		kuanW=photoContainer.width();
+		kuanH=photoContainer.height();
+		toS=kuanW/imgW;
+		toX=-(imgW-kuanW)/2;
+		toY=-(imgH-kuanH)/2;
+
+		photoSizeData.pinchResize(toX,toY,toS,0,0.5);
+		that2.onUploadComplete();
+	}
+
+
+	//涓婁紶鍥剧墖鍒版湇鍔″櫒
+	function sendCardImg(){
+		var cvs = document.getElementById("myCanvas");
+		//璋冪敤Canvas鐨則oDataURL鎺ュ彛锛屽緱鍒扮殑鏄収鐗囨枃浠剁殑base64缂栫爜string
+		var data = cvs.toDataURL("image/jpeg", 0.6);
+		//base64 string杩囩煭鏄剧劧灏变笉鏄甯哥殑鍥剧墖鏁版嵁浜嗭紝杩囨护銇€�
+		if(data.length<48){
+			console.log("data error.");
+			return;
+		}
+		//鍥剧墖鐨刡ase64 string鏍煎紡鏄痙ata:/image/jpeg;base64,xxxxxxxxxxx
+		//鏄互data:/image/jpeg;base64,寮€澶寸殑锛屾垜浠湪鏈嶅姟绔啓鍏ュ浘鐗囨暟鎹殑鏃跺€欎笉闇€瑕佽繖涓ご锛�
+		//鎵€浠ュ湪杩欓噷鍙嬁澶村悗闈㈢殑string
+		//褰撶劧杩欎竴姝ュ彲浠ュ湪鏈嶅姟绔仛锛屼絾璁╅棽鐫€铔嬬柤鐨勫鎴风甯潃鍋氫竴鐐瑰惂~~~锛堢◢寰噺杞讳竴鐐规湇鍔″櫒鍘嬪姏锛�
+		data = data.split(",")[1];
+		$.ajax({
+			type: "POST",
+			url:"do/game.php?"+getRandom(),
+			data:{ac:"uploadimg",photo:data},
+			dataType:'json',
+			success: function(data) {
+				if(data.status==true){
+					alert("涓婁紶鎴愬姛锛�");
+					$(".wording").hide();
+					loadcard();
+				}else{
+					alert(data.msg);
+				}
+			}
+		});
+	};
+
+
+
+	window[exportName] = mReSizeImg;
+})(window, document, 'mReSizeImg');
+
+
+(function(window, document, exportName, undefined) {
+	var mPinchResize = function(){};
+
+	mPinchResize.prototype = {
+		photo:{},
+		saveData:{x:0,y:0,scale:1,rotation:0},
+		saveDataTmp:{x:0,y:0,scale:1,rotation:0},
+		init:function(){
+			var that=this;
+			this.saveData={x:0,y:0,scale:1,rotation:0};
+			this.saveDataTmp={x:0,y:0,scale:1,rotation:0};
+			//鎵嬫寚绉诲姩鑳屾櫙
+			mc = Hammer(this.photo[0], {touchAction: 'auto'});
+			mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+			mc.get('pinch').set({ enable: true});
+			mc.get('rotate').set({ enable: true});
+
+			photo=this.photo;
+			mc.on("pan pinchmove rotatemove", function(ev) {
+				pinchResize(ev.deltaX,ev.deltaY,ev.scale,ev.rotation,0,that);
+			});
+			mc.on("panend pinchend rotateend", function(ev) {
+				saveHeadTmpData(that);
+			});
+		},
+		pinchResize:function(evDeltaX,evDeltaY,evScale,evRotation,time){
+			pinchResize(evDeltaX,evDeltaY,evScale,evRotation,time,this);
+			that=this;
+			fn=saveHeadTmpData
+			setTimeout("fn(that)",1000);
+		},
+		reset:function(){
+			this.saveData={x:0,y:0,scale:1,rotation:0}
+			this.saveDataTmp={x:0,y:0,scale:1,rotation:0}
+		},
+		getData:function(){
+			return this.saveData;
+			//return false;
+		},
+		onModifyComplete:function(fn){
+			if(typeof(fn)=='function'){
+				this.onModifyComplete=fn;
+			}
+		},
+	}
+	
+	function pinchResize(evDeltaX,evDeltaY,evScale,evRotation,time,that) {
+		x=that.saveData.x
+		y=that.saveData.y
+		scale=that.saveData.scale
+		rotation=that.saveData.rotation
+		// console.log(x+" : "+y+" : "+scale+" : "+rotation);
+
+		toX=x+evDeltaX;
+		toY=y+evDeltaY;
+		toS=scale*evScale;
+		toR=(rotation+evRotation+360)%360;
+
+		that.saveDataTmp.x=toX;
+		that.saveDataTmp.y=toY;
+		that.saveDataTmp.scale=toS;
+		that.saveDataTmp.rotation=toR;
+
+		TweenMax.to(that.photo,time,{x:toX,y:toY, scale:toS, rotation:toR+"_short", transformOrigin:"center center"})
+	}
+
+	//鍌ㄥ瓨鍥剧墖鍙樺舰涓存椂鏁版嵁
+	function saveHeadTmpData(that){
+		that.saveData.x=that.saveDataTmp.x;
+		that.saveData.y=that.saveDataTmp.y;
+		that.saveData.scale=that.saveDataTmp.scale;
+		that.saveData.rotation=that.saveDataTmp.rotation;
+		//console.log(that.saveData)
+		
+		that.onModifyComplete(that.saveData);
+	}
+
+	window[exportName] = mPinchResize;
+
+})(window, document, 'mPinchResize');

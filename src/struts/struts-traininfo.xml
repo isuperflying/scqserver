@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="trainInfoAction" namespace="/" extends="struts-default">
+	    <!-- 培训机构-->
+	    <action name="getTrainInfoDataList" class="trainInfoAction" method="getTrainInfoDataList">
+            <result name="success">traininfo/train_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddTrainInfo" class="trainInfoAction" method="toAdd">
+            <result name="success">traininfo/train_info_add.jsp</result>
+        </action>
+        <action name="toTrainInfoInput" class="trainInfoAction" method="toInput">
+            <result name="success">traininfo/train_info_input.jsp</result>
+        </action>
+        <action name="toEditTrainInfo" class="trainInfoAction" method="toEdit">
+            <result name="success">traininfo/train_info_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="getTrainInfoByPage" class="trainInfoAction" method="getTrainInfoByPage"></action>
+        <action name="saveTrainInfo" class="trainInfoAction" method="saveTrainInfo">
+        	<result name="success" type="redirectAction">getTrainInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateTrainInfo" class="trainInfoAction" method="updateTrainInfo">
+        	<result name="success" type="redirectAction">getTrainInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="deleteTrainInfo" class="trainInfoAction" method="deleteTrainInfo"></action>
+        <action name="inputTrainInfoExcel" class="trainInfoAction" method="inputTrainInfoExcel"></action>
+        <action name="getAllCityByProvinceId" class="trainInfoAction" method="getAllCityByProvinceId"></action>
+        <action name="getAllAreaByCityId" class="trainInfoAction" method="getAllAreaByCityId"></action>
+        <action name="findTrainService" class="trainInfoAction" method="findTrainService"></action>
+        <action name="inputExamFile" class="trainInfoAction" method="inputExamFile"></action>
+	</package>
+</struts>

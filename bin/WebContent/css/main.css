@@ -1,0 +1,42 @@
+.all_div{
+    background-image: url("../images/main_bg.png");
+    background-repeat: repeat-x;
+    width: 1200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top_div{
+    width: 1200px;
+    height: 74px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+.content_div {
+    background-repeat: no-repeat;
+    width: 1200px;
+    height:592px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top_logo{
+	margin-top: 5px;
+}
+.top_user_div{
+    position: relative;
+    top: -30px;
+    left: 400px;
+}
+.bottom_div{
+	background-image: url("../images/bottom_bg.png");
+    background-repeat: repeat-x;
+    width: 1200px;
+    height: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 34px;
+    font-size: 12px;
+    color: white;
+}

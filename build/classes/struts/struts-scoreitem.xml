@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="scoreItemAction" namespace="/" extends="struts-default">
+	    <!-- 培训机构-->
+	    <action name="getScoreItemDataList" class="scoreItemAction" method="getDataList">
+            <result name="success">scoreitem/score_item_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddScoreItem" class="scoreItemAction" method="toAdd">
+            <result name="success">scoreitem/score_item_add.jsp</result>
+        </action>
+        
+        <action name="toEditScoreItem" class="scoreItemAction" method="toEdit">
+            <result name="success">scoreitem/score_item_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+       
+        <action name="saveScoreItem" class="scoreItemAction" method="saveScoreItem">
+        	<result name="success" type="redirectAction">getScoreItemDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateScoreItem" class="scoreItemAction" method="updateScoreItem">
+        	<result name="success" type="redirectAction">getScoreItemDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+        <action name="deleteScoreItem" class="scoreItemAction" method="deleteScoreItem"></action>
+        
+	</package>
+</struts>

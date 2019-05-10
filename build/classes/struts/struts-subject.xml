@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="subjectAction" namespace="/" extends="struts-default">
+	    
+	    <action name="saveSubject" class="subjectAction" method="saveSubject">
+			<result name="success" type="redirectAction">toSubjectDetail?subject.id=${subject.id}</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="toSubjectDetail" class="subjectAction" method="toSubjectDetail">
+			<result name="success">/mobile/vote_detail.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="toSubjectResult" class="subjectAction" method="toSubjectResult">
+			<result name="success">/mobile/vote_result.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="findSubjectListService" class="subjectAction" method="findSubjectListService"></action>
+		<action name="addSubjectService" class="subjectAction" method="addSubjectService"></action>
+	</package>
+</struts>

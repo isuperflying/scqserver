@@ -1,0 +1,95 @@
+.top{
+	width: 100%;
+	height:50px;
+	background-color: #279174;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.top_text{
+	width:100%;
+	height:50px; 
+	line-height:50px;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.query{
+	width: 100%;
+	height:40px;
+	background-color: #F5F5F5;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.query_text{
+	width:100%;
+	height:40px; 
+	line-height:40px;
+	color: #000;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+table.allTable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #ff5555;
+	border-collapse: collapse;
+	width: 100%;
+}
+table.allTable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #ff5555;
+	background-color: #CDCDC1;
+	font-size: 18px;
+}
+table.allTable td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #ff5555;
+	background-color: #ffffff;
+	font-size: 15px;
+}
+
+.new_annualBonus {
+		background-color:#4bbda2;
+		border: 0px;
+		border-radius: 20px;
+		box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+		color: #FFF;
+		cursor: pointer;
+		font: bold 18px;
+		font-size:18px;
+		font-weight:600;
+		padding: 6px 12px 2px 12px;
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	}
+	
+.operate_annualBonus {
+	background-color:#4bbda2;
+	border: 0px;
+	border-radius: 20px;
+	box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+	color: #FFF;
+	cursor: pointer;
+	font: bold 15px;
+	font-size:15px;
+	padding: 6px 12px 4px 12px;
+}
+
+.query_annualBonus {
+	background-color:#4bbda2;
+	border: 0px;
+	border-radius: 20px;
+	box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+	color: #FFF;
+	cursor: pointer;
+	font: bold 15px;
+	font-size:15px;
+	padding: 6px 12px 4px 12px;
+}

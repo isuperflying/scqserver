@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="userService" class="com.ant.scq.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+
+	<bean id="trainInfoService" class="com.ant.scq.service.impl.TrainInfoServiceImpl">
+		<property name="trainInfoDao" ref="trainInfoDao"></property>
+	</bean>
+	<bean id="menuTypeService" class="com.ant.scq.service.impl.MenuTypeServiceImpl">
+		<property name="menuTypeDao" ref="menuTypeDao"></property>
+	</bean>
+	<bean id="courseInfoService" class="com.ant.scq.service.impl.CourseInfoServiceImpl">
+		<property name="courseInfoDao" ref="courseInfoDao"></property>
+	</bean>
+	<bean id="teacherInfoService" class="com.ant.scq.service.impl.TeacherInfoServiceImpl">
+		<property name="teacherInfoDao" ref="teacherInfoDao"></property>
+	</bean>
+	<bean id="subjectService" class="com.ant.scq.service.impl.SubjectServiceImpl">
+		<property name="subjectDao" ref="subjectDao"></property>
+	</bean>
+	<bean id="subjectItemService" class="com.ant.scq.service.impl.SubjectItemServiceImpl">
+		<property name="subjectItemDao" ref="subjectItemDao"></property>
+	</bean>
+	<bean id="subjectUserService" class="com.ant.scq.service.impl.SubjectUserServiceImpl">
+		<property name="subjectUserDao" ref="subjectUserDao"></property>
+	</bean>
+	<bean id="subjectCommentService" class="com.ant.scq.service.impl.SubjectCommentServiceImpl">
+		<property name="subjectCommentDao" ref="subjectCommentDao"></property>
+	</bean>
+	<bean id="trainCommentService" class="com.ant.scq.service.impl.TrainCommentServiceImpl">
+		<property name="trainCommentDao" ref="trainCommentDao"></property>
+	</bean>
+	<bean id="examInfoService" class="com.ant.scq.service.impl.ExamInfoServiceImpl">
+		<property name="examInfoDao" ref="examInfoDao"></property>
+	</bean>
+	<bean id="userExamService" class="com.ant.scq.service.impl.UserExamServiceImpl">
+		<property name="userExamDao" ref="userExamDao"></property>
+	</bean>
+	<bean id="scoreItemService" class="com.ant.scq.service.impl.ScoreItemServiceImpl">
+		<property name="scoreItemDao" ref="scoreItemDao"></property>
+	</bean>
+	<bean id="sourceInfoService" class="com.ant.scq.service.impl.SourceInfoServiceImpl">
+		<property name="sourceInfoDao" ref="sourceInfoDao"></property>
+	</bean>
+</beans>

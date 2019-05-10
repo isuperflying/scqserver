@@ -1,0 +1,156 @@
+body {
+	width: auto;
+	font: normal 100% Helvetica, Arial, sans-serif;
+}
+
+.regBtn {
+	background-color: #20a0fc;
+	border: 0px solid #98CCE7;
+	border-radius: 3px;
+	box-shadow: inset rgba(255, 255, 255, 0.6) 0 1px 1px, rgba(0, 0, 0, 0.1)
+		0 1px 1px;
+	color: #FFF;
+	cursor: pointer;
+	float: right;
+	font: bold 18px;
+	font-size: 1.3em;
+	padding: 5px 14px;
+	margin-top: 2%;
+	width: 100%;
+}
+.subjectBtn {
+	background-color: #20a0fc;
+	border: 0px solid #98CCE7;
+	border-radius: 3px;
+	box-shadow: inset rgba(255, 255, 255, 0.6) 0 1px 1px, rgba(0, 0, 0, 0.1)
+		0 1px 1px;
+	color: #FFF;
+	cursor: pointer;
+	font: bold 18px;
+	font-size: 1.3em;
+	padding: 5px 14px;
+	margin-top: 2%;
+}
+.regBtn:HOVER {
+	background-image: -moz-linear-gradient(to top, #B5DEF2, #85CFEE);
+}
+
+.detailBtn {
+	background-color: #20a0fc;
+	border: 0px solid #98CCE7;
+	border-radius: 3px;
+	box-shadow: inset rgba(255, 255, 255, 0.6) 0 1px 1px, rgba(0, 0, 0, 0.1)
+		0 1px 1px;
+	color: #FFF;
+	cursor: pointer;
+	font: bold 14px;
+	font-size: 1em;
+	padding: 5px 12px;
+	margin-top: 2%;
+	width: auto;
+}
+.detailBtn:HOVER {
+	background-image: -moz-linear-gradient(to top, #B5DEF2, #85CFEE);
+}
+
+/* .input_middle{ background:url(../images/input-middle.png) repeat-x center;}
+.box_td_center{background-color: #ececec; text-align:left;}
+.input_text{height:30px; width:100%;background:transparent; float: left;border:0px; border-style:none; font-size:13px; font-family:SimHei; margin-left:0px} */
+.input-text {
+	height: 35px;
+	border: 1px solid #dedede;
+	font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+	border-bottom: 1px solid #c3c3c3;
+	background: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 1em;
+	margin: 0 auto;
+}
+
+input::-webkit-input-placeholder {
+	color: #999;
+	font-size: 1em;
+	line-height: 100%;
+}
+
+input:focus::-webkit-input-placeholder, input:hover::-webkit-input-placeholder
+	{
+	color: #c2c2c2;
+	font-size: 1em;
+	line-height: 100%;
+}
+
+.confirm_table {
+	border-collapse: separate;
+	width: 100%;
+	text-align: center;
+}
+
+.confirm_table tr td {
+	width: 50%;
+	border-bottom: #eeeeee solid 1px;
+	height:40px;
+	line-height: 40px;
+}
+
+.td_left {
+	font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+
+.td_left font {
+	margin-right: 20px;
+}
+.exam_theme {
+	width: 100%;
+	height: 45px;
+	line-height:45px;
+	text-align: center;
+	font-size: 18px;
+	background-color: #EEE9E9;
+}
+.exam_page {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	font-size: 18px;
+	background-color: #63B8FF;
+}
+.exam_page_table{
+	width: 100%;
+	height: 50px;
+}
+.exam_page tr{
+	height: 25px;
+	line-height: 25px;
+}
+.exam_page tr td{
+	width: 30%;
+	height: 25px;
+}
+.exam_user {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.exam_confirm_btn {
+	background-color: #20a0fc;
+	border: 0px solid #98CCE7;
+	border-radius: 3px;
+	box-shadow: inset rgba(255, 255, 255, 0.6) 0 1px 1px, rgba(0, 0, 0, 0.1)
+		0 1px 1px;
+	color: #FFF;
+	cursor: pointer;
+	float: right;
+	font: bold 18px;
+	font-size: 1.3em;
+	padding: 5px 14px;
+	margin-top: 2%;
+	width: 100%;
+	margin-left: 50px;
+}

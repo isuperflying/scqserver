@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="teacherInfoAction" namespace="/" extends="struts-default">
+	    <!-- 培训机构-->
+	    <action name="getTeacherInfoDataList" class="teacherInfoAction" method="getTeacherInfoDataList">
+            <result name="success">teacherinfo/teacher_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddTeacherInfo" class="teacherInfoAction" method="toAdd">
+            <result name="success">teacherinfo/teacher_info_add.jsp</result>
+        </action>
+        <action name="toEditTeacherInfo" class="teacherInfoAction" method="toEdit">
+            <result name="success">teacherinfo/teacher_info_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="getTeacherInfoByPage" class="teacherInfoAction" method="getTeacherInfoByPage"></action>
+        <action name="saveTeacherInfo" class="teacherInfoAction" method="saveTeacherInfo">
+        	<result name="success" type="redirectAction">getTeacherInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateTeacherInfo" class="teacherInfoAction" method="updateTeacherInfo">
+        	<result name="success" type="redirectAction">getTeacherInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toTeacherInfoInput" class="teacherInfoAction" method="toInput">
+            <result name="success">teacherinfo/teacher_info_input.jsp</result>
+        </action>
+        <action name="deleteTeacherInfo" class="teacherInfoAction" method="deleteTeacherInfo"></action>
+        <action name="inputTeacherInfoExcel" class="teacherInfoAction" method="inputTeacherInfoExcel"></action>
+        <action name="findTeacherByTrainIdService" class="teacherInfoAction" method="findTeacherByTrainIdService"></action>
+	</package>
+</struts>

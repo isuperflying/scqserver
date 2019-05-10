@@ -1,0 +1,77 @@
+/*输入字体*/
+@font-face {src: url('../../fonts/BRADHITC.TTF') format('truetype');font-family:'BRADHITC';}
+
+body,html{margin:0;padding:0;width:100%;height:100%;font-size:100%;font-family:'寰蒋闆呴粦','Arial','clean','sans-serif';color:#444;-webkit-overflow-scrolling:none;background: url('../../images/site_bg.jpg') repeat-y center top;background-size: 100%;}
+a{color:#757575;text-decoration:none;}
+a:hover{color:#999;}
+a img{border:0px;}
+img{width:100%;vertical-align:middle;}
+ul{list-style-type:none;padding:0;margin:0;}
+
+.clearboth{clear:both;}
+.isTableCell{display: table-cell;vertical-align: middle;overflow: hidden;}
+.siteHead{position: fixed;top: 0;width: 100%;z-index: 999}
+.siteMenuLogo{position: fixed;width: 8%;padding: 4% 1% 3% 2%;right:0;top:0;z-index: 1000;}
+.siteMenu {position: fixed;z-index: 998;width: 100%;display:none;left:0;top:0;}
+.siteMenu ul{position: absolute;top: 3%;left: 2%;width: 92.5%;height: 100%;}
+.siteMenu ul>li{width: 25%;height: 38%;float: left;background:rgba(255,255,255,0);margin-top: 13%;}
+.siteMenu ul>li>a{display: inline-block;width: 100%;height: 100%;}
+
+.siteMain{height: 100%;}
+
+.shareText{height: 0;width: 0;overflow: hidden;}
+.shareLayer{height: 100%;width: 100%;position: fixed;background: rgba(0,0,0,0.8);z-index: 20;color: #fff;text-align: right;padding: 3% 0 0 0;display: none;}
+.shareLayer i{margin: 0 3% 0 2%; -webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+/*LOADING*/
+.siteLoading{position:absolute;top:0;right:0;width:100%;height:100%;z-index:999999;background:#576D7B;}
+.siteLoading .content{text-align:center;color:#fff;}
+.siteLoading .content .line1{background:#aaa;width:100%;position:absolute;left:0;top:50%;z-index:1;}
+.siteLoading .content .line2{height:2px;background:#fff;width:0%;}
+.siteLoading .content .num{position:absolute;left:40%;top:52%;width:20%;z-index:1;}
+.siteLoading .content .pic{position:absolute;left:20%;top:40%;width:60%;z-index:1;}
+.siteLoading .content .pic img{position:absolute;left:0;top:0;opacity: 0;}
+.siteLoadingPic {width: 0;height: 0;opacity: 0;}
+
+.ajaxLoading {position: fixed;width: 100%;height:100%;left:0%;top:0%;background: url('../../images/ajaxLoading.gif') no-repeat center center rgba(0,0,0,0.85);background-size: 20%; z-index: 1001;display: none;}
+
+.letter{width:96%; position:relative;margin: 10% auto;}
+.letterTop0 {position: absolute;z-index: 11;top:0%; width: 100%;}
+.letterTop1 {position: absolute;z-index: 1;bottom:0%; width: 100%;}
+.letterDown {position: relative;z-index: 10;box-shadow: 0px 10px 10px rgba(0,0,0,0.5);}
+.letterContent {overflow: hidden; text-align:center;border-radius: 3px;background: url('../../images/page_bg2.jpg') repeat-y center top; background-size: 100%;padding:8% 2%;position: relative;width:95%;bottom:60%;z-index: 10;margin: 0 0.5% -20%;box-shadow: 0px 0px 10px rgba(0,0,0,0.5);}
+
+.siteIndex .letterContent .myVote .head{width: 38%;float:left;}
+.siteIndex .letterContent .myVote .head img{border-radius: 10px;border: 4px solid #c5c5c5;}
+.siteIndex .letterContent .myVote .word{width: 56%;float:left;margin:0 0 0 5%;}
+.siteIndex .letterContent .myVote .word h1{margin:2% 0;font-size: 110%; font-size:4.5vw;text-decoration: underline; text-align: left;}
+.siteIndex .letterContent .myVote .word h2{margin:0% 0;font-size: 100%; font-size:4vw;text-align: left;}
+.siteIndex .letterContent .myVote .word h2 b{color:#b2191e;font-family: 'BRADHITC';font-size: 260%;}
+.siteIndex .letterContent .myVote .word h3{margin:0;font-size: 80%; font-size:3.5vw;font-weight: normal;text-align: left;}
+.siteIndex .letterContent .w{text-align: center;}
+.siteIndex .letterContent .w0{border:5px solid #c5c5c5;border-radius: 10px;display: inline-block;padding: 1% 5%;font-size: 120%; font-size:6vw;color:#b2191e;font-weight: bold;margin: 5% auto 0%;}
+.siteIndex .letterContent .w1{font-size: 90%;width:80%;margin: 2% auto;}
+.siteIndex .letterContent .w2{font-size: 120%;margin: 5% auto; white-space: nowrap;}
+.siteIndex .letterContent .w2 .b{display: inline-block;width: 40%;margin: 0 1%;}
+.siteIndex .letterContent .w2 .b div{font-size: 80%;}
+.siteIndex .letterContent .w2 .b0{color:#AE0B10;}
+.siteIndex .letterContent .w2 .b1{color:#000;}
+/*.siteIndex .letterContent .w2 a{border-radius: 4px; color: #fff;padding: 3% 8% 3% 16%;background:url('../../images/ico_mail.png') no-repeat 10% center #b2191e;background-size: auto 28%;}*/
+.siteIndex .letterContent .w3{font-size: 110%;margin: 5% auto; font-weight: bold;}
+.siteIndex .letterContent .w4{font-size: 90%;width:80%;margin: 5% auto; }
+.siteIndex .letterContent .logo{width: 65%;margin: 0% auto 10%;}
+.siteIndex .letterContent .w5{font-size: 90%;margin: 0% auto 10%; }
+
+.siteMaker .letterContent .title{font-size: 120%;font-weight: bold;margin: 1% auto;}
+.siteMaker .letterContent .MyHead{width:80%;margin: 5% auto;border-radius: 10px;border:10px solid #c5c5c5;position: relative;}
+.siteMaker .letterContent .MyHead .container{position: absolute;top:0;left:0;width: 100%;height: 100%;overflow: hidden;}
+.siteMaker .letterContent .MyHead .container input{position: absolute;width: 100%;height: 100%;top:0;left:0;opacity: 0;}
+.siteMaker .letterContent .MyHead .container canvas{display: none;}
+.siteMaker .letterContent .MyHead .container img{width: auto;height: auto;}
+.siteMaker .letterContent .photoResult{position: absolute;width: 100%;left: 0;display: none;}
+.siteMaker .letterContent .control{margin: 3% 0 5% 0;}
+.siteMaker .letterContent .control .b{display: inline-block;color: #fff;background: #627A91;border-radius: 5px;padding: 3% 6%;}
+.siteMaker .letterContent .btns{margin: 0 0 10% 0;}
+.siteMaker .letterContent .btns .b{display: inline-block;width: 40%;color: #fff;background: #b2191e;line-height: 250%;border-radius: 5px;}
+.siteMaker .letterContent .btns .b1{background: #aaa;}
+
+

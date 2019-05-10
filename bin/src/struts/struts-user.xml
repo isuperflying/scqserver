@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="userAction" namespace="/" extends="struts-default">
+	    <action name="userLogin" class="userAction" method="userLogin">
+            <result name="sup_success" type="redirect">/main.jsp</result>
+            <result name="emp_success" type="chain"><param name="actionName">toEmpIndex</param></result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        <action name="toEmpIndex" class="userAction" method="toEmpIndex">
+            <result name="success">/emp_index.jsp</result>
+        </action>
+        <action name="toEmpMain" class="userAction" method="toEmpMain">
+            <result name="success">/emp_main.jsp</result>
+        </action>
+		<action name="addUser" class="userAction" method="addUser">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="loginOut" class="userAction" method="loginOut">
+        </action>
+        <action name="toUpdateUser" class="userAction" method="toUpdateUser">
+            <result name="success">/edit_user.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateUser" class="userAction" method="updateUser">
+        </action>
+        
+        <!-- 验证微信用户是否登录 -->
+        <action name="userValidate" class="userAction" method="userValidate">
+            <result name="success" type="chain"><param name="actionName">getTrainCourseDataList</param></result>
+            <result name="register">/mobile/register.jsp</result>
+        </action>
+        
+        <!-- 注册用户 -->
+        <action name="registerUser" class="userAction" method="registerUser">
+            <result name="success" type="chain"><param name="actionName">getTrainCourseDataList</param></result>
+            <result name="register">/mobile/register.jsp</result>
+        </action>
+        
+        <action name="getTrainCourseDataList" class="trainCourseAction" method="getDataList">
+            <result name="success">mobile/trainCourse/train_course_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+        <action name="getTrainExamDataList" class="trainExamAction" method="getDataList">
+            <result name="success">mobile/trainExam/train_exam_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <!-- 成绩查询 -->
+        <action name="getTrainScoreDataList" class="trainExamAction" method="getScoreDataList">
+            <result name="success">mobile/trainExam/train_score_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+	</package>
+</struts>

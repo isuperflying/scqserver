@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="sourceInfoAction" namespace="/" extends="struts-default">
+	    <!-- 培训机构-->
+	    <action name="getSourceInfoDataList" class="sourceInfoAction" method="getSourceInfoDataList">
+            <result name="success">sourceinfo/source_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddSourceInfo" class="sourceInfoAction" method="toAdd">
+            <result name="success">sourceinfo/source_info_add.jsp</result>
+        </action>
+        
+        <action name="toEditSourceInfo" class="sourceInfoAction" method="toEdit">
+            <result name="success">sourceinfo/source_info_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+       
+        <action name="saveSourceInfo" class="sourceInfoAction" method="saveSourceInfo">
+        	<result name="success" type="redirectAction">getSourceInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateSourceInfo" class="sourceInfoAction" method="updateSourceInfo">
+        	<result name="success" type="redirectAction">getSourceInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+        <action name="deleteSourceInfo" class="sourceInfoAction" method="deleteSourceInfo"></action>
+        
+	</package>
+</struts>

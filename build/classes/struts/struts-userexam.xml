@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="userExamAction" namespace="/" extends="struts-default">
+	   	
+	    <action name="getUserExamDataList" class="userExamAction" method="getUserExamDataList">
+            <result name="success">userexam/user_exam_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+        <action name="getExamDataListByExamId" class="userExamAction" method="getExamDataListByExamId">
+            <result name="success">userexam/exam_record_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+        <action name="updateUserExamScore" class="userExamAction" method="updateUserExamScore"></action>
+	</package>
+</struts>

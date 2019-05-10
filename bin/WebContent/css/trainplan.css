@@ -1,0 +1,19 @@
+.add_train_plan_div {
+    display: none;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 300px;
+}
+.save_tp_div{
+    position: absolute;
+    text-align: center;
+    width:100%;
+    bottom: 5%;
+}
+.tp_content{
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+}
