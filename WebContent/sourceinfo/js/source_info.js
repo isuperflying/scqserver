@@ -30,18 +30,18 @@ $(document).ready(function() {
     
     
   //新增-保存
-    $("#save_score_item").click(function() {
-        if ($("#score_name").val() == null || $("#score_name").val() == '') {
-        	layer.msg('请输入打分项');
-            return false;
-        }
+    $("#save_source_info").click(function() {
+//        if ($("#score_name").val() == null || $("#score_name").val() == '') {
+//        	layer.msg('请输入打分项');
+//            return false;
+//        }
 	     
         //提交表单
-        $("#addScoreItemForm").submit();
+        $("#addSourceInfoForm").submit();
     });
     
     //编辑保存
-    $("#edit_score_item").click(function() {
+    $("#edit_source_info").click(function() {
     	if ($("#score_name").val() == null || $("#score_name").val() == '') {
     		layer.msg('请输入打分项');
             return false;
@@ -56,7 +56,7 @@ $(document).ready(function() {
             success: function(data){
             	if(null != data && data == "success"){
             		layer.closeAll('loading');
-            		window.location.href="getScoreItemDataList.action?page="+cnum;
+            		window.location.href="getSourceInfoDataList.action?page="+cnum;
             	}else{
             		layer.msg('修改失败');
             	}
@@ -65,7 +65,7 @@ $(document).ready(function() {
             	layer.msg('修改失败');
             }
     	 };
-        $('#editScoreItemForm').ajaxForm(options).submit();
+        $('#editSourceInfoForm').ajaxForm(options).submit();
     });
     
     
@@ -136,16 +136,17 @@ function toSyn(){
 
 
 function toAdd(){
-	window.location.href = "toAddScoreItem.action";
+	window.location.href = "toAddSourceInfo.action";
 }
 function toInput(){
 	window.location.href = "toInput.action";
 }
+
 //编辑
 function toEdit(id,name){
 	$("#sid").val(id);
 	$("#score_name").val(name);
-	//window.location.href = "toEditScoreItem.action?scoreItem.id="+id;
+	//window.location.href = "toEditSourceInfo.action?sourceInfo.id="+id;
 	layer.open({
 		  type: 1,
 		  title: false,
@@ -165,11 +166,11 @@ function toDelete(id){
 	    btn: ['确定','取消'] //按钮
 	}, function(){
 		$.ajax({
-            url : 'deleteScoreItem.action',
+            url : 'deleteSourceInfo.action',
             dataType : 'text',
             type : 'post',
             data : {
-                'scoreItem.id' : id
+                'sourceInfo.id' : id
             },
             success: function (data) {
                 if ($.trim(data) == "success") {

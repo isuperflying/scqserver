@@ -41,7 +41,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                <thead>
 	                    <tr style="height: 38px;font-size: 15px;">
 	                        <th width="5%">编号</th>
-	                        <th width="25%">打分项</th>
+	                        <th width="25%">素材名称</th>
+	                        <th width="25%">是否收费</th>
+	                        <th width="25%">素材价格</th>
 	                        <th width="15%">操作</th>
 	                    </tr>
 	                </thead>
@@ -54,7 +56,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                            <td align="center">
 	                                <c:out value="${sourceInfo.scName}" />
 	                            </td>
-	                            
+	                            <td align="center">
+	                                <c:out value="${sourceInfo.scIsVip}" />
+	                            </td>
+	                            <td align="center">
+	                                <c:out value="${sourceInfo.scPrice}" />
+	                            </td>
 	                            <td align="center">
 	                                <input type="button" id="source_info_edit" class="btn green" onclick="toEdit('${sourceInfo.id}','${sourceInfo.scName}')" value="编辑"/>
 	                                <input type="button" id="source_info_delete" class="btn green" onclick="toDelete('${sourceInfo.id}')" value="删除"/>

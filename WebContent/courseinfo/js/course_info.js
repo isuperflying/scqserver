@@ -184,6 +184,7 @@ function toInput(){
 function toEdit(id){
 	window.location.href = "toEditCourseInfo.action?courseInfo.id="+id;
 }
+
 //删除
 function toDelete(id){
 	//询问框

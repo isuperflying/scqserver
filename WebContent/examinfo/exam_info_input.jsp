@@ -81,8 +81,8 @@ $(document).ready(function(){
 	    			<td align="right">试卷方式：</td>
 	    			<td>
 	    				<select id="exam_type" style="width: 100px;height: 25px;" onchange="toShow();">
-	                            <option value="1" selected="selected">自编题目</option>
-	                            <option value="2">附件试题</option>
+                            <option value="1" selected="selected">自编题目</option>
+                            <option value="2">附件试题</option>
 	                    </select>
 	    			</td>
 	    			<td>试卷编号：</td>

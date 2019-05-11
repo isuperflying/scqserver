@@ -19,7 +19,7 @@ body{
 <body>
 	<div class="top">
 		<img class="img_css" src="images/logo.png" width="60" height="60">
-		<span class="top_text">南京新港中专校</span>
+		<span class="top_text">测试项目</span>
 		<label  style="float:right; padding-top: 15px; padding-right:34px;color:#ffffff;">
 	    	欢迎您：${user.userName }&nbsp;&nbsp;
 	    	<a href="login.jsp"  target="_top"  title="退出" style="color:#ffffff;text-decoration: none;">退出 </a><br/><br/>

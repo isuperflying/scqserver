@@ -1,7 +1,6 @@
 package com.ant.scq.action;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -20,7 +19,6 @@ import com.alibaba.fastjson.JSON;
 import com.ant.scq.base.BaseActionSupport;
 import com.ant.scq.entity.SourceInfo;
 import com.ant.scq.entity.User;
-import com.ant.scq.entity.UserExam;
 import com.ant.scq.service.ISourceInfoService;
 import com.ant.scq.service.IUserExamService;
 import com.ant.scq.util.DateUtil;
@@ -43,9 +41,18 @@ public class SourceInfoAction extends BaseActionSupport {
 	
 	List<SourceInfo> sourceInfoList;
 
-	private File excelFile; // 上传的文件
-	private String excelFileFileName; // 保存原始文件名
-
+	private File thumbFile; // 上传的文件
+	
+	private String thumbFileFileName; // 保存原始文件名
+	
+	private File scPreFile; // 上传的文件
+	
+	private String scPreFileFileName; // 保存原始文件名
+	
+	private File scCreateFile; // 上传的文件
+	
+	private String scCreateFileFileName; // 保存原始文件名
+	
 	public ISourceInfoService getSourceInfoService() {
 		return this.sourceInfoService;
 	}
@@ -86,6 +93,54 @@ public class SourceInfoAction extends BaseActionSupport {
 		return "success";
 	}
 
+	public File getThumbFile() {
+		return thumbFile;
+	}
+
+	public void setThumbFile(File thumbFile) {
+		this.thumbFile = thumbFile;
+	}
+
+	public String getThumbFileFileName() {
+		return thumbFileFileName;
+	}
+
+	public void setThumbFileFileName(String thumbFileFileName) {
+		this.thumbFileFileName = thumbFileFileName;
+	}
+
+	public File getScPreFile() {
+		return scPreFile;
+	}
+
+	public void setScPreFile(File scPreFile) {
+		this.scPreFile = scPreFile;
+	}
+
+	public String getScPreFileFileName() {
+		return scPreFileFileName;
+	}
+
+	public void setScPreFileFileName(String scPreFileFileName) {
+		this.scPreFileFileName = scPreFileFileName;
+	}
+
+	public File getScCreateFile() {
+		return scCreateFile;
+	}
+
+	public void setScCreateFile(File scCreateFile) {
+		this.scCreateFile = scCreateFile;
+	}
+
+	public String getScCreateFileFileName() {
+		return scCreateFileFileName;
+	}
+
+	public void setScCreateFileFileName(String scCreateFileFileName) {
+		this.scCreateFileFileName = scCreateFileFileName;
+	}
+
 	public String getSourceInfoDataList() {
 		String result = "success";
 		try {
@@ -107,19 +162,51 @@ public class SourceInfoAction extends BaseActionSupport {
 		}
 		return result;
 	}
-
-	public String saveSourceInfo() {
+	
+	
+	public void saveSourceInfo() {
 		String result = "success";
 		try {
-			boolean res = sourceInfoService.saveSourceInfo(sourceInfo);
-			if (!res) {
-				result = "fail";
+			System.out.println("thumbFileName--->" + thumbFileFileName);
+			if (sourceInfo != null) {
+				
+				//System.out.println(JSON.toJSON(sourceInfo));
+				
+				String thumbSavePath = System.currentTimeMillis() + ".png";
+				
+				String preImgSavePath = System.currentTimeMillis() + ((int)(Math.random()*10+1) + 10) + ".png";
+				
+				String createImgSavePath = System.currentTimeMillis() + ((int)(Math.random()*10+1) + 20) + ".png";
+				
+				System.out.println("图片的名称--->" + thumbSavePath + "---" + preImgSavePath + "---" + createImgSavePath);
+				
+				if (thumbFile != null) {
+					UploadFileUtils.upload4Stream(thumbSavePath, "E:\\word_upload", thumbFile);
+				}
+				
+				if (scPreFile != null) {
+					UploadFileUtils.upload4Stream(preImgSavePath, "E:\\word_upload", scPreFile);
+				}
+				
+				if (scCreateFile != null) {
+					UploadFileUtils.upload4Stream(createImgSavePath, "E:\\word_upload", scCreateFile);
+				}
+				
+				sourceInfo.setScThumb(thumbSavePath);
+				sourceInfo.setScPreImg(preImgSavePath);
+				sourceInfo.setScBeforeImg(createImgSavePath);
+				sourceInfo.setScAddDate(DateUtil.getCurrentDate());//添加时间
+				boolean res = sourceInfoService.saveSourceInfo(sourceInfo);
+				if (!res) {
+					result = "error";
+				}
 			}
+
 		} catch (Exception e) {
+			result = "error";
 			e.printStackTrace();
-			result = "fail";
 		}
-		return result;
+		WriterUtil.writeStr(result);
 	}
 
 	public String toEdit() {
@@ -174,40 +261,13 @@ public class SourceInfoAction extends BaseActionSupport {
 	
 	// 判断文件类型
 	public Workbook createWorkBook(InputStream is) throws IOException {
-		if (excelFileFileName.toLowerCase().endsWith("xls")) {
+		if (thumbFileFileName.toLowerCase().endsWith("xls")) {
 			return new HSSFWorkbook(is);
 		}
-		if (excelFileFileName.toLowerCase().endsWith("xlsx")) {
+		if (thumbFileFileName.toLowerCase().endsWith("xlsx")) {
 			return new XSSFWorkbook(is);
 		}
 		return null;
-	}
-
-	public void inputExamFile() {
-		String result = "success";
-		try {
-			System.out.println("excelFileFileName--->" + excelFileFileName);
-			if (sourceInfo != null) {
-				
-				String addFilePath = System.currentTimeMillis() + ".png";
-				
-				if (excelFile != null) {
-					UploadFileUtils.upload4Stream(addFilePath, "E:\\word_upload", excelFile);
-				}
-				
-				//sourceInfo.setExamFilePath(addFilePath);
-				//sourceInfo.setExamAddDate(DateUtil.getCurrentDate());//当前时间
-				boolean res = sourceInfoService.saveSourceInfo(sourceInfo);
-				if (!res) {
-					result = "error";
-				}
-			}
-
-		} catch (Exception e) {
-			result = "error";
-			e.printStackTrace();
-		}
-		WriterUtil.writeStr(result);
 	}
 
 	 public InputStream getDownloadFile() throws IOException {
@@ -273,21 +333,4 @@ public class SourceInfoAction extends BaseActionSupport {
 		Pattern pattern = Pattern.compile("^[0-9]+(.[0-9]*)?$");
 		return pattern.matcher(str).matches();
 	}
-
-	public File getExcelFile() {
-		return excelFile;
-	}
-
-	public void setExcelFile(File excelFile) {
-		this.excelFile = excelFile;
-	}
-
-	public String getExcelFileFileName() {
-		return excelFileFileName;
-	}
-
-	public void setExcelFileFileName(String excelFileFileName) {
-		this.excelFileFileName = excelFileFileName;
-	}
-
 }

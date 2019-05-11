@@ -23,8 +23,12 @@ public class SourceInfo {
 	private double scPrice;
 	
 	private String scThumb;
+		
+	private String scPreImg;
 	
 	private String scBeforeImg;
+	
+	private String scAddDate;
 	
 	@Id
 	// 采用数据库自增方式生成主键
@@ -91,6 +95,15 @@ public class SourceInfo {
 	public void setScThumb(String scThumb) {
 		this.scThumb = scThumb;
 	}
+	
+	@Column(name = "sc_pre_img",length = 100)
+	public String getScPreImg() {
+		return scPreImg;
+	}
+
+	public void setScPreImg(String scPreImg) {
+		this.scPreImg = scPreImg;
+	}
 
 	@Column(name = "sc_before_img",length = 100)
 	public String getScBeforeImg() {
@@ -99,6 +112,15 @@ public class SourceInfo {
 
 	public void setScBeforeImg(String scBeforeImg) {
 		this.scBeforeImg = scBeforeImg;
+	}
+
+	@Column(name = "sc_add_date",length = 100)
+	public String getScAddDate() {
+		return scAddDate;
+	}
+
+	public void setScAddDate(String scAddDate) {
+		this.scAddDate = scAddDate;
 	}
 	
 }

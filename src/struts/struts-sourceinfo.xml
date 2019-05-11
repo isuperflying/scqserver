@@ -5,7 +5,7 @@
 <struts>
 	<!-- 与spring集成的写法，action等交予spring管理 -->
 	<package name="sourceInfoAction" namespace="/" extends="struts-default">
-	    <!-- 培训机构-->
+	   	
 	    <action name="getSourceInfoDataList" class="sourceInfoAction" method="getSourceInfoDataList">
             <result name="success">sourceinfo/source_info_list.jsp</result>
             <result name="fail">/fail.jsp</result>
