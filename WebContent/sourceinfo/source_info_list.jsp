@@ -31,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        <input type="hidden" id="current_page" value="${page }">
 	        <input type="hidden" id="total_count" value="${totalCount }">
 	        <div class="nav">
-	            <label>&gt;&gt;考试打分项</label>
+	            <label>&gt;&gt;素材管理</label>
 	        </div>
 	        <div class="top_div">
 	            <input type="button" id="toAdd_source_info" onclick="toAdd();" class="btn green" value="新增"/>
@@ -41,9 +41,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                <thead>
 	                    <tr style="height: 38px;font-size: 15px;">
 	                        <th width="5%">编号</th>
-	                        <th width="25%">素材名称</th>
-	                        <th width="25%">是否收费</th>
-	                        <th width="25%">素材价格</th>
+	                        <th width="15%">素材名称</th>
+	                        <th width="10%">所属类别</th>
+	                        <th width="10%">所属专题</th>
+	                        <th width="10%">是否收费</th>
+	                        <th width="10%">素材价格</th>
+	                        <th width="25%">缩略图</th>
 	                        <th width="15%">操作</th>
 	                    </tr>
 	                </thead>
@@ -57,10 +60,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                                <c:out value="${sourceInfo.scName}" />
 	                            </td>
 	                            <td align="center">
+	                                <c:if test="${sourceInfo.scType == 1 }">恶搞</c:if>
+	                                <c:if test="${sourceInfo.scType == 2 }">微信</c:if>
+	                                <c:if test="${sourceInfo.scType == 3 }">明星</c:if>
+	                                <c:if test="${sourceInfo.scType == 4 }">炫富</c:if>
+	                                <c:if test="${sourceInfo.scType == 5 }">表白</c:if>
+	                                <c:if test="${sourceInfo.scType == 6 }">游戏</c:if>
+	                                <c:if test="${sourceInfo.scType == 7 }">证书</c:if>
+	                                <c:if test="${sourceInfo.scType == 8 }">节日</c:if>
+	                                <c:if test="${sourceInfo.scType == 9 }">其它</c:if>
+	                            </td>
+	                            <td align="center">
+	                                <c:if test="${sourceInfo.collectionId == 1 }">趣味表白</c:if>
+	                                <c:if test="${sourceInfo.collectionId == 2 }">豪车炫富</c:if>
+	                                <c:if test="${sourceInfo.collectionId == 3 }">微信聊天</c:if>
+	                                <c:if test="${sourceInfo.collectionId == 4 }">节日贺卡</c:if>
+	                            </td>
+	                            <td align="center">
 	                                <c:out value="${sourceInfo.scIsVip}" />
 	                            </td>
 	                            <td align="center">
 	                                <c:out value="${sourceInfo.scPrice}" />
+	                            </td>
+	                            <td align="center">
+	                                <input type="image" width="60" height="60" src="/files/1557584871171.png">
 	                            </td>
 	                            <td align="center">
 	                                <input type="button" id="source_info_edit" class="btn green" onclick="toEdit('${sourceInfo.id}','${sourceInfo.scName}')" value="编辑"/>

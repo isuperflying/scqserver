@@ -15,7 +15,8 @@
 	margin-top: 5px;
 }
 .content_div{
-	height:400px;
+	height:auto;
+	min-height:500px;
 	width: 100%;
 }
 .page_div{

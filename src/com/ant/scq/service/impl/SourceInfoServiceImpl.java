@@ -27,7 +27,7 @@ public class SourceInfoServiceImpl implements ISourceInfoService {
 	}
 
 	public List<SourceInfo> getDataListBySql(int start, int limit, String uid) {
-		String hql = " SELECT T FROM SourceInfo T ";
+		String hql = " SELECT T FROM SourceInfo T order by scAddDate desc";
 		return this.sourceInfoDao.getDataList(hql, null, start, limit);
 	}
 

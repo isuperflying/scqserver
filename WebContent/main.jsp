@@ -12,12 +12,12 @@
 	
 </script>
 </head>
-<frameset rows="95%,5%" frameborder="no">
+<frameset rows="100%,0%" frameborder="no">
 	<frameset rows="15%,85%" frameborder="no">
 		<frame src="top.jsp">
 		<frameset cols="13%,87%" frameborder="no">
 			<frame src="left.jsp">
-			<frame src="getExamInfoDataList.action" name="show" scrolling="no">
+			<frame src="getSourceInfoDataList.action" name="show" scrolling="no">
 		</frameset>
 	</frameset>
 	<frame src="bottom.jsp">
