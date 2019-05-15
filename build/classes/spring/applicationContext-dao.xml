@@ -58,4 +58,7 @@
 	<bean id="sourceInfoDao" class="com.ant.scq.dao.impl.SourceInfoDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	<bean id="sourceFieldInfoDao" class="com.ant.scq.dao.impl.SourceFieldInfoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>

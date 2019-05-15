@@ -67,15 +67,15 @@ function toAddSc(){
                     <td align="right">所属类别:</td>
                     <td align="left">
                         <select id="sc_type" style="width: 100px;height: 25px;" name="sourceInfo.scType">
-                            <option value="1" selected="selected">恶搞</option>
-                            <option value="2">微信</option>
-                            <option value="3">明星</option>
-                            <option value="4">炫富</option>
-                            <option value="5">表白</option>
+                            <option value="1" selected="selected">微信</option>
+                            <option value="2">表白</option>
+                            <option value="3">节日</option>
+                            <option value="4">恶搞</option>
+                            <option value="5">炫富</option>
                             <option value="6">游戏</option>
                             <option value="7">证书</option>
-                            <option value="8">节日</option>
-                            <option value="9">其他</option>
+                            <option value="8">明星</option>
+                            <option value="9">其它</option>
                         </select>
                     </td>
                     <td align="right">所属专题:</td>
@@ -83,7 +83,7 @@ function toAddSc(){
                         <select id="sc_cid" name="sourceInfo.collectionId" style="width: 100px;height: 25px;">
                             <option value="1" selected="selected">趣味表白</option>
                             <option value="2">豪车炫富</option>
-                            <option value="3">微信聊天</option>
+                            <option value="3">证书恶搞</option>
                             <option value="4">节日贺卡</option>
                         </select>
                     </td>
@@ -93,17 +93,21 @@ function toAddSc(){
                     <td align="left">
                         <input id="sc_name" name="sourceInfo.scName" type="text" class="input"/>
                     </td>
-                    <td align="right">是否收费:</td>
+                    <td align="right">素材描述:</td>
+                    <td align="left">
+                        <input id="sc_desc" name="sourceInfo.scDesc" type="text" class="input"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">是否收费:</td>
                     <td align="left">
                         <select id="sc_is_vip" name="scourceInfo.scIsVip" style="width: 100px;height: 25px;">
                             <option value="0" selected="selected">免费</option>
                             <option value="1">收费</option>
                         </select>
                     </td>
-                </tr>
-                <tr>
                 	<td align="right">素材价格:</td>
-                    <td align="left" colspan="3">
+                    <td align="left">
                         <input id="sc_price" name="sourceInfo.scPrice" type="text" class="input"/>
                     </td>
                 </tr>

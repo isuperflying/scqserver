@@ -18,6 +18,8 @@ public class SourceInfo {
 	
 	private String scName;
 	
+	private String scDesc;
+	
 	private int scIsVip;
 	
 	private double scPrice;
@@ -67,6 +69,15 @@ public class SourceInfo {
 
 	public void setScName(String scName) {
 		this.scName = scName;
+	}
+	
+	@Column(name = "sc_desc", length = 500)
+	public String getScDesc() {
+		return scDesc;
+	}
+
+	public void setScDesc(String scDesc) {
+		this.scDesc = scDesc;
 	}
 
 	@Column(name = "sc_is_vip")

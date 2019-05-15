@@ -62,4 +62,8 @@
 		scope="prototype">
 		<property name="sourceInfoService" ref="sourceInfoService"></property>
 	</bean>
+	<bean id="sourceFieldInfoAction" class="com.ant.scq.action.SourceFieldInfoAction"
+		scope="prototype">
+		<property name="sourceFieldInfoService" ref="sourceFieldInfoService"></property>
+	</bean>
 </beans>

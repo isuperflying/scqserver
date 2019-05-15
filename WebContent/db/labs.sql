@@ -2,21 +2,21 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50140
+Source Server Version : 50717
 Source Host           : localhost:3306
 Source Database       : labs
 
 Target Server Type    : MYSQL
-Target Server Version : 50140
+Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-08-08 00:05:05
+Date: 2019-05-15 23:23:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for hat_area
+-- Table structure for `hat_area`
 -- ----------------------------
 DROP TABLE IF EXISTS `hat_area`;
 CREATE TABLE `hat_area` (
@@ -3176,7 +3176,7 @@ INSERT INTO `hat_area` VALUES ('3143', '659003', '图木舒克市', '659000');
 INSERT INTO `hat_area` VALUES ('3144', '659004', '五家渠市', '659000');
 
 -- ----------------------------
--- Table structure for hat_city
+-- Table structure for `hat_city`
 -- ----------------------------
 DROP TABLE IF EXISTS `hat_city`;
 CREATE TABLE `hat_city` (
@@ -3537,7 +3537,7 @@ INSERT INTO `hat_city` VALUES ('344', '654300', '阿勒泰地区', '650000');
 INSERT INTO `hat_city` VALUES ('345', '659000', '省直辖行政单位', '650000');
 
 -- ----------------------------
--- Table structure for hat_province
+-- Table structure for `hat_province`
 -- ----------------------------
 DROP TABLE IF EXISTS `hat_province`;
 CREATE TABLE `hat_province` (
@@ -3586,7 +3586,63 @@ INSERT INTO `hat_province` VALUES ('33', '810000', '香港特别行政区');
 INSERT INTO `hat_province` VALUES ('34', '820000', '澳门特别行政区');
 
 -- ----------------------------
--- Table structure for t_course
+-- Table structure for `scq_sc_field_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `scq_sc_field_info`;
+CREATE TABLE `scq_sc_field_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sc_id` int(11) DEFAULT NULL,
+  `field_name` varchar(100) DEFAULT NULL,
+  `is_input_way` int(11) DEFAULT NULL,
+  `is_visable` int(11) DEFAULT NULL,
+  `input_type` int(11) DEFAULT NULL,
+  `font_style_type` int(11) DEFAULT NULL,
+  `font_color` varchar(20) DEFAULT NULL,
+  `font_size` int(11) DEFAULT NULL,
+  `font_way` int(11) DEFAULT NULL,
+  `font_direction` int(11) DEFAULT NULL,
+  `first_pointx` int(11) DEFAULT NULL,
+  `first_pointy` int(11) DEFAULT NULL,
+  `second_pointx` int(11) DEFAULT NULL,
+  `second_pointy` int(11) DEFAULT NULL,
+  `xoffset` int(11) DEFAULT NULL,
+  `yoffset` int(11) DEFAULT NULL,
+  `angle_value` int(11) DEFAULT NULL,
+  `field_index` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of scq_sc_field_info
+-- ----------------------------
+INSERT INTO `scq_sc_field_info` VALUES ('1', '1', '背景图', '0', '0', '4', '0', '#ffffff', '24', '0', '0', '227', '223', '446', '444', '0', '0', '0', '0');
+
+-- ----------------------------
+-- Table structure for `scq_sc_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `scq_sc_info`;
+CREATE TABLE `scq_sc_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sc_type` int(11) DEFAULT NULL,
+  `collection_id` int(11) DEFAULT NULL COMMENT '所属专题ID',
+  `sc_name` varchar(200) DEFAULT NULL,
+  `sc_desc` varchar(500) DEFAULT NULL,
+  `sc_is_vip` int(11) DEFAULT NULL,
+  `sc_price` double DEFAULT NULL,
+  `sc_thumb` varchar(100) DEFAULT NULL,
+  `sc_pre_img` varchar(100) DEFAULT NULL,
+  `sc_before_img` varchar(100) DEFAULT NULL,
+  `sc_add_date` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of scq_sc_info
+-- ----------------------------
+INSERT INTO `scq_sc_info` VALUES ('1', '2', '1', '九宫格爱心发射表白', '朋友圈爱心发射九宫格图片在线生成', '0', '0', '1557928933542.png', '1557928933555.png', '1557928933566.png', '2019-05-15 22:02:14');
+
+-- ----------------------------
+-- Table structure for `t_course`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_course`;
 CREATE TABLE `t_course` (
@@ -3623,7 +3679,7 @@ INSERT INTO `t_course` VALUES ('82', '数学中班算数班', '数中', '63', '1
 INSERT INTO `t_course` VALUES ('83', '英语大班提高班', '英大', '63', '3', '4', '鼓楼区龙园西路58号黄河大厦3楼', '2', '2016-02-26', '2016-06-19', '8:30-10:00', '每周一、四上课', '', '', '37', '徐志荣', '0', '16', '2800', '书', '1', null);
 
 -- ----------------------------
--- Table structure for t_exam_info
+-- Table structure for `t_exam_info`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_exam_info`;
 CREATE TABLE `t_exam_info` (
@@ -3632,21 +3688,24 @@ CREATE TABLE `t_exam_info` (
   `exam_name` varchar(200) DEFAULT NULL,
   `exam_content` varchar(500) DEFAULT NULL,
   `exam_file_path` varchar(200) DEFAULT NULL,
-  `exam_start_date` timestamp NULL DEFAULT NULL,
-  `exam_end_date` timestamp NULL DEFAULT NULL,
+  `exam_start_date` varchar(100) DEFAULT NULL,
+  `exam_end_date` varchar(100) DEFAULT NULL,
   `exam_total_time` int(11) DEFAULT NULL COMMENT '考试时长(分钟)',
-  `exam_add_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '试卷发布时间',
+  `exam_add_date` varchar(100) DEFAULT NULL COMMENT '试卷发布时间',
   `remark` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_exam_info
 -- ----------------------------
-INSERT INTO `t_exam_info` VALUES ('8', 'JY20170006', '2017期中评测考试', '', '1502118182229.doc', '2017-07-30 00:00:00', '2017-07-30 00:00:00', '120', '2017-08-07 23:03:02', null);
+INSERT INTO `t_exam_info` VALUES ('18', 'AAA', 'AAA', '', '1503237815845.doc', '2017-08-20 22:03', '2017-08-20 23:03', '33', '2017-08-20 22:03:36', null);
+INSERT INTO `t_exam_info` VALUES ('19', 'c111', 'BBBB', '', '1503818689918.doc', '2017-08-27 15:24', '2017-08-27 15:24', '22', '2017-08-27 15:24:49', null);
+INSERT INTO `t_exam_info` VALUES ('20', '34', 'yyyy', '', '1503818850361.doc', '2017-08-02 15:27', '2017-08-03 15:27', '33', '2017-08-27 15:27:30', null);
+INSERT INTO `t_exam_info` VALUES ('21', '35', '23423', '', '1557591392498.png', '2019-05-22 00:16', '2019-05-30 00:16', '33', '2019-05-12 00:16:32', null);
 
 -- ----------------------------
--- Table structure for t_menu_type
+-- Table structure for `t_menu_type`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_menu_type`;
 CREATE TABLE `t_menu_type` (
@@ -3671,7 +3730,7 @@ INSERT INTO `t_menu_type` VALUES ('8', '兴趣', '1', '0', '1', null);
 INSERT INTO `t_menu_type` VALUES ('9', '课业', '2', '0', '1', null);
 
 -- ----------------------------
--- Table structure for t_order
+-- Table structure for `t_order`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_order`;
 CREATE TABLE `t_order` (
@@ -3689,7 +3748,24 @@ CREATE TABLE `t_order` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for t_subject
+-- Table structure for `t_score_item`
+-- ----------------------------
+DROP TABLE IF EXISTS `t_score_item`;
+CREATE TABLE `t_score_item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `score_item_name` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_score_item
+-- ----------------------------
+INSERT INTO `t_score_item` VALUES ('1', '测试mmyyy');
+INSERT INTO `t_score_item` VALUES ('2', '测试333');
+INSERT INTO `t_score_item` VALUES ('3', '测试444');
+
+-- ----------------------------
+-- Table structure for `t_subject`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_subject`;
 CREATE TABLE `t_subject` (
@@ -3707,7 +3783,7 @@ INSERT INTO `t_subject` VALUES ('46', '南京哪所学校最好？', null, '投�
 INSERT INTO `t_subject` VALUES ('47', '2643', null, '各地');
 
 -- ----------------------------
--- Table structure for t_subject_comment
+-- Table structure for `t_subject_comment`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_subject_comment`;
 CREATE TABLE `t_subject_comment` (
@@ -3732,7 +3808,7 @@ INSERT INTO `t_subject_comment` VALUES ('207', '46', '1', '学校升学率很高
 INSERT INTO `t_subject_comment` VALUES ('208', '46', '1', '学校不错。', null);
 
 -- ----------------------------
--- Table structure for t_subject_item
+-- Table structure for `t_subject_item`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_subject_item`;
 CREATE TABLE `t_subject_item` (
@@ -3757,7 +3833,7 @@ INSERT INTO `t_subject_item` VALUES ('199', '47', 'C', '送滴', '0');
 INSERT INTO `t_subject_item` VALUES ('200', '47', 'D', 'topography', '0');
 
 -- ----------------------------
--- Table structure for t_subject_user
+-- Table structure for `t_subject_user`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_subject_user`;
 CREATE TABLE `t_subject_user` (
@@ -3779,7 +3855,7 @@ INSERT INTO `t_subject_user` VALUES ('205', '46', '1', 'D');
 INSERT INTO `t_subject_user` VALUES ('206', '46', '1', 'C');
 
 -- ----------------------------
--- Table structure for t_teacher
+-- Table structure for `t_teacher`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_teacher`;
 CREATE TABLE `t_teacher` (
@@ -3813,7 +3889,7 @@ INSERT INTO `t_teacher` VALUES ('41', '63', '3', '王磊', '1', '28', '4', null,
 INSERT INTO `t_teacher` VALUES ('42', '63', '4', '刘清', '2', '35', '10', null, null, '认真严谨', '高三物理', null);
 
 -- ----------------------------
--- Table structure for t_train
+-- Table structure for `t_train`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_train`;
 CREATE TABLE `t_train` (
@@ -3842,7 +3918,7 @@ CREATE TABLE `t_train` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for t_train_comment
+-- Table structure for `t_train_comment`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_train_comment`;
 CREATE TABLE `t_train_comment` (
@@ -3863,7 +3939,7 @@ INSERT INTO `t_train_comment` VALUES ('3', '63', '1', '课程讲解非常详细'
 INSERT INTO `t_train_comment` VALUES ('209', '63', '1', '学校还可以，服务好。', null);
 
 -- ----------------------------
--- Table structure for t_user
+-- Table structure for `t_user`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_user`;
 CREATE TABLE `t_user` (
@@ -3884,17 +3960,17 @@ CREATE TABLE `t_user` (
   `user_integral` int(11) DEFAULT NULL,
   `remark` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
 INSERT INTO `t_user` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '管理员', '1', '28', '1', '421181198910016612', '江苏省南京市鼓楼区', '13812345612', '88231467', 'antleague@163.com', '66668888', '1000000', '1000', '管理员');
-INSERT INTO `t_user` VALUES ('2', 'nj0001', 'e10adc3949ba59abbe56e057f20f883e', '学生0001号', '1', '34', '0', '421181198910017712', '江苏省南京市鼓楼区', '13813982325', '88231457', 'antlea11e@163.com', '33338888', '2000000', '2000', '普通用户');
-INSERT INTO `t_user` VALUES ('12', '13813982325', 'e10adc3949ba59abbe56e057f20f883e', null, '0', '0', '0', null, null, null, null, null, null, null, '0', null);
+INSERT INTO `t_user` VALUES ('15', 'test01', 'e10adc3949ba59abbe56e057f20f883e', '测试人员111', '1', '0', null, '', '', '1231231212', null, '', null, null, '0', '');
+INSERT INTO `t_user` VALUES ('16', 'test02', 'e10adc3949ba59abbe56e057f20f883e', '测试人员2', '1', '0', null, '', '', '23423234234', null, '', null, null, '0', '');
 
 -- ----------------------------
--- Table structure for t_user_exam
+-- Table structure for `t_user_exam`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_user_exam`;
 CREATE TABLE `t_user_exam` (
@@ -3902,11 +3978,14 @@ CREATE TABLE `t_user_exam` (
   `user_id` int(11) DEFAULT NULL,
   `exam_info_id` int(11) DEFAULT NULL,
   `exam_state` int(11) DEFAULT '0' COMMENT '0:未考试，1：已考试：2：通过，3：不通过',
+  `exam_use_time` int(11) DEFAULT NULL COMMENT '  考试用时',
+  `exam_score` double DEFAULT NULL COMMENT '考试分数',
+  `is_mark_score` int(11) DEFAULT NULL COMMENT '0未打分，1已打分',
   `remark` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user_exam
 -- ----------------------------
-INSERT INTO `t_user_exam` VALUES ('1', '2', '7', '0', null);
+INSERT INTO `t_user_exam` VALUES ('15', '1', '18', '1', '1', '80', '1', null);

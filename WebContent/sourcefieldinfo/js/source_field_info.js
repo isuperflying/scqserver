@@ -18,7 +18,7 @@ $(document).ready(function() {
             onPageChange: function (num, type) {
                 if(type=="change"){
                 	cnum = num;
-                    window.location.href="getSourceInfoDataList.action?page="+num;
+                    window.location.href="getSourceFieldInfoDataList.action?page="+num;
                 }
             }
         });
@@ -37,7 +37,7 @@ $(document).ready(function() {
 //        }
 	     
         //提交表单
-        $("#addSourceInfoForm").submit();
+        $("#addSourceFieldInfoForm").submit();
     });
     
     //编辑保存
@@ -56,7 +56,7 @@ $(document).ready(function() {
             success: function(data){
             	if(null != data && data == "success"){
             		layer.closeAll('loading');
-            		window.location.href="getSourceInfoDataList.action?page="+cnum;
+            		window.location.href="getSourceFieldInfoDataList.action?page="+cnum;
             	}else{
             		layer.msg('修改失败');
             	}
@@ -65,7 +65,7 @@ $(document).ready(function() {
             	layer.msg('修改失败');
             }
     	 };
-        $('#editSourceInfoForm').ajaxForm(options).submit();
+        $('#editSourceFieldInfoForm').ajaxForm(options).submit();
     });
     
     
@@ -136,19 +136,18 @@ function toSyn(){
 
 
 function toAdd(){
-	window.location.href = "toAddSourceInfo.action";
+	var sid = $("#sid").val();
+	window.location.href = "toAddSourceFieldInfo.action?sourceFieldInfo.sourceInfo.id=" + sid;
 }
-
-function toFieldList(sid){
-	//alert(sid);
-	window.location.href = "getSourceFieldInfoDataListBySid.action?sourceFieldInfo.sourceInfo.id="+sid;
+function toInput(){
+	window.location.href = "toInput.action";
 }
 
 //编辑
 function toEdit(id,name){
 	$("#sid").val(id);
 	$("#score_name").val(name);
-	//window.location.href = "toEditSourceInfo.action?sourceInfo.id="+id;
+	//window.location.href = "toEditSourceFieldInfo.action?sourceFieldInfo.id="+id;
 	layer.open({
 		  type: 1,
 		  title: false,
@@ -168,11 +167,11 @@ function toDelete(id){
 	    btn: ['确定','取消'] //按钮
 	}, function(){
 		$.ajax({
-            url : 'deleteSourceInfo.action',
+            url : 'deleteSourceFieldInfo.action',
             dataType : 'text',
             type : 'post',
             data : {
-                'sourceInfo.id' : id
+                'sourceFieldInfo.id' : id
             },
             success: function (data) {
                 if ($.trim(data) == "success") {

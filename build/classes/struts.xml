@@ -27,4 +27,5 @@
 	<include file="struts/struts-userexam.xml"></include>
 	<include file="struts/struts-scoreitem.xml"></include>
 	<include file="struts/struts-sourceinfo.xml"></include>
+	<include file="struts/struts-sourcefieldinfo.xml"></include>
 </struts>

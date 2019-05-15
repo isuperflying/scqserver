@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="sourceFieldInfoAction" namespace="/" extends="struts-default">
+	   	
+	    <action name="getSourceFieldInfoDataList" class="sourceFieldInfoAction" method="getSourceFieldInfoDataList">
+            <result name="success">sourcefieldinfo/source_field_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+        <action name="toAddSourceFieldInfo" class="sourceFieldInfoAction" method="toAdd">
+            <result name="success">sourcefieldinfo/source_field_info_add.jsp</result>
+        </action>
+        
+        <action name="toEditSourceFieldInfo" class="sourceFieldInfoAction" method="toEdit">
+            <result name="success">sourcefieldinfo/source_field_info_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+       
+        <action name="saveSourceFieldInfo" class="sourceFieldInfoAction" method="saveSourceFieldInfo">
+        	<result name="success" type="redirectAction">getSourceFieldInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateSourceFieldInfo" class="sourceFieldInfoAction" method="updateSourceFieldInfo">
+        	<result name="success" type="redirectAction">getSourceFieldInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+        <action name="deleteSourceFieldInfo" class="sourceFieldInfoAction" method="deleteSourceFieldInfo"></action>
+        
+        <action name="getSourceFieldInfoDataListBySid" class="sourceFieldInfoAction" method="getSourceFieldInfoDataListBySid">
+            <result name="success">sourcefieldinfo/source_field_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        
+	</package>
+</struts>
