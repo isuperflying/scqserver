@@ -65,17 +65,25 @@ function toAddScField(){
                     </td>
                     <td align="right">是否可见:</td>
                     <td align="left">
-                        <select id="sc_cid" name="sourceFieldInfo.isVisable" style="width: 100px;height: 25px;">
+                        <select id="is_visable" name="sourceFieldInfo.isVisable" style="width: 100px;height: 25px;" onchange="visableChange();">
                             <option value="0" selected="selected">可见</option>
                             <option value="1">隐藏</option>
                         </select>
-                                                                              字段输入方式：
-                        <select id="sc_cid" name="sourceFieldInfo.isInputWay" style="width: 100px;height: 25px;">
-                            <option value="0" selected="selected">普通</option>
-                            <option value="1">绑定</option>
-                            <option value="2">后追加</option>
-                        </select>
                     </td>
+                </tr>
+                <tr id="visable_type">
+               	   <td align="right">隐藏类型：</td>
+                   <td align="left">
+                   		<select id="hide_type" name="sourceFieldInfo.hideType" style="width: 100px;height: 25px;">
+                   			<option value="-1" selected="selected">--</option>
+                            <option value="0">姓名</option>
+                            <option value="1">时间</option>
+                        </select>
+                   </td>
+                   <td align="right">隐藏值获取方式：</td>
+                   <td>
+                   	 	<input id="field_name" name="sourceFieldInfo.hideValue" type="text" class="input"/>
+                   </td>
                 </tr>
                 <tr>
                 	<td align="right">输入类型:</td>
@@ -91,9 +99,51 @@ function toAddScField(){
                     <td align="right">字体类型:</td>
                     <td align="left">
                         <select id="sc_is_vip" name="sourceFieldInfo.fontStyleType" style="width: 100px;height: 25px;">
-                            <option value="0" selected="selected">微软雅黑</option>
-                            <option value="1">华文楷体</option>
+                            <option value="1" selected="selected">微软雅黑</option>
+                            <option value="2">仿宋</option>
+                            <option value="3">楷体</option>
+                            <option value="4">经典空叠体</option>
+                            <option value="5">郭敬明体</option>
+                            <option value="6">吴嘉睿手写体</option>
+                            <option value="7">胭脂连体</option>
+                            <option value="8">徐金如硬笔行楷</option>
+                            <option value="9">叶根友毛笔行书</option>
+                            <option value="10">数字字体</option>
+                            <option value="11">黑体</option>
+                            <option value="12">方正榜书行简体</option>
+                            <option value="13">方正大黑简体(粗)</option>
+                            <option value="14">身份证设计字体</option>
+                            <option value="15">钟齐余好建行艺体</option>
+                            <option value="16">方正胖娃简体</option>
+                            <option value="17">经典中国简体</option>
+                            <option value="18">迷你简体卡通</option>
+                            <option value="19">迷你简体毡笔黑</option>
+                            <option value="20">情话手写</option>
+                            <option value="21">书体坊颜体</option>
+                            <option value="22">华文行楷</option>
                         </select>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">文本约束类型:</td>
+                    <td align="left" colspan="3">
+                    	<select id="sc_input_type" name="sourceFieldInfo.restrain" style="width: 100px;height: 25px;">
+                            <option value="0" selected="selected">无约束</option>
+                            <option value="1">整数</option>
+                            <option value="2">中文</option>
+                            <option value="3">英文</option>
+                            <option value="4">数值</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">下拉框输入值(用#号分割开设置):</td>
+                    <td align="left">
+                    	<input id="option_txt" name="sourceFieldInfo.optionTxt" type="text" class="input"/>
+                    </td>
+                    <td align="right">文本最大输入长度:</td>
+                    <td align="left">
+                    	<input id="option_txt" name="sourceFieldInfo.inputLength" type="text" class="input"/>
                     </td>
                 </tr>
                 <tr>

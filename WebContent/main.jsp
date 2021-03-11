@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<title>智能实验室平台</title>
+<title>测试平台</title>
 <script type="text/javascript">
 	
 </script>
@@ -17,7 +17,7 @@
 		<frame src="top.jsp">
 		<frameset cols="13%,87%" frameborder="no">
 			<frame src="left.jsp">
-			<frame src="getSourceInfoDataList.action" name="show" scrolling="no">
+			<frame src="getSpecialInfoDataList.action" name="show" scrolling="no">
 		</frameset>
 	</frameset>
 	<frame src="bottom.jsp">

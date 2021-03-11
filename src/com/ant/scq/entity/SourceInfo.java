@@ -32,6 +32,10 @@ public class SourceInfo {
 	
 	private String scAddDate;
 	
+	private int scWidth;
+	
+	private int scHeight;
+	
 	@Id
 	// 采用数据库自增方式生成主键
 	// @GeneratedValue(strategy=GenerationType.AUTO)
@@ -80,7 +84,7 @@ public class SourceInfo {
 		this.scDesc = scDesc;
 	}
 
-	@Column(name = "sc_is_vip")
+	@Column(name = "is_vip")
 	public int getScIsVip() {
 		return scIsVip;
 	}
@@ -132,6 +136,24 @@ public class SourceInfo {
 
 	public void setScAddDate(String scAddDate) {
 		this.scAddDate = scAddDate;
+	}
+
+	@Column(name = "sc_img_width")
+	public int getScWidth() {
+		return scWidth;
+	}
+
+	public void setScWidth(int scWidth) {
+		this.scWidth = scWidth;
+	}
+
+	@Column(name = "sc_img_height")
+	public int getScHeight() {
+		return scHeight;
+	}
+
+	public void setScHeight(int scHeight) {
+		this.scHeight = scHeight;
 	}
 	
 }

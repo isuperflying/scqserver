@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-05-15 23:23:26
+Date: 2019-05-25 23:19:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3595,7 +3595,11 @@ CREATE TABLE `scq_sc_field_info` (
   `field_name` varchar(100) DEFAULT NULL,
   `is_input_way` int(11) DEFAULT NULL,
   `is_visable` int(11) DEFAULT NULL,
+  `hide_type` int(11) DEFAULT NULL COMMENT '1姓名,2时间',
+  `hide_value` varchar(200) DEFAULT NULL,
   `input_type` int(11) DEFAULT NULL,
+  `input_length` int(11) DEFAULT NULL,
+  `option_txt` varchar(500) DEFAULT NULL,
   `font_style_type` int(11) DEFAULT NULL,
   `font_color` varchar(20) DEFAULT NULL,
   `font_size` int(11) DEFAULT NULL,
@@ -3610,12 +3614,24 @@ CREATE TABLE `scq_sc_field_info` (
   `angle_value` int(11) DEFAULT NULL,
   `field_index` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of scq_sc_field_info
 -- ----------------------------
-INSERT INTO `scq_sc_field_info` VALUES ('1', '1', '背景图', '0', '0', '4', '0', '#ffffff', '24', '0', '0', '227', '223', '446', '444', '0', '0', '0', '0');
+INSERT INTO `scq_sc_field_info` VALUES ('1', '1', '背景图', '0', '0', '0', '0', '4', '0', '0', '0', '#ffffff', '24', '0', '0', '227', '223', '446', '444', '0', '0', '0', '0');
+INSERT INTO `scq_sc_field_info` VALUES ('2', '2', '请输入被邀请人名字', '0', '0', '0', '0', '0', '0', '0', '0', '#000000', '50', '0', '0', '698', '615', '1192', '675', '0', '0', '0', '0');
+INSERT INTO `scq_sc_field_info` VALUES ('3', '2', '请输入新人姓名', '0', '0', '0', '0', '0', '0', '0', '0', '#000000', '50', '0', '0', '680', '915', '1390', '980', '0', '0', '0', '1');
+INSERT INTO `scq_sc_field_info` VALUES ('4', '2', '请输入年份', '0', '0', '0', '0', '0', '0', '0', '0', '#000000', '40', '0', '0', '764', '720', '880', '771', '0', '0', '0', '2');
+INSERT INTO `scq_sc_field_info` VALUES ('5', '2', '请输入月份', '0', '0', '0', '0', '0', '0', '0', '0', '#000000', '40', '0', '0', '917', '720', '990', '771', '0', '0', '0', '3');
+INSERT INTO `scq_sc_field_info` VALUES ('6', '2', '请输入月份', '0', '0', '0', '0', '0', '0', '0', '0', '#000000', '40', '0', '0', '1018', '720', '1110', '771', '0', '0', '0', '4');
+INSERT INTO `scq_sc_field_info` VALUES ('7', '3', '请输入甲方名字', '0', '0', '-1', '', '0', '0', '', '0', '#000000', '25', '0', '0', '194', '195', '417', '227', '0', '0', '0', '0');
+INSERT INTO `scq_sc_field_info` VALUES ('8', '3', '请输入甲方名字-隐藏', '0', '1', '0', '0', '0', '0', '', '0', '#000000', '25', '0', '0', '181', '977', '417', '1018', '0', '0', '0', '1');
+INSERT INTO `scq_sc_field_info` VALUES ('9', '3', '请输入乙方名字', '0', '0', '-1', '0', '0', '0', '', '0', '#000000', '25', '0', '0', '194', '239', '417', '266', '0', '0', '0', '2');
+INSERT INTO `scq_sc_field_info` VALUES ('10', '3', '请输入乙方名字-隐藏', '0', '1', '0', '2', '0', '0', '', '0', '#000000', '25', '0', '0', '489', '980', '656', '1018', '0', '0', '0', '3');
+INSERT INTO `scq_sc_field_info` VALUES ('11', '3', '时间1', '0', '1', '1', 'YYYY.MM.DD', '0', '0', '', '0', '#000000', '25', '0', '0', '181', '1055', '417', '1091', '0', '0', '0', '4');
+INSERT INTO `scq_sc_field_info` VALUES ('12', '3', '时间2', '0', '1', '1', 'YYYY.MM.DD', '0', '0', '', '0', '#000000', '25', '0', '0', '489', '1055', '656', '1091', '0', '0', '0', '5');
+INSERT INTO `scq_sc_field_info` VALUES ('13', '3', '请输入分手原因', '0', '0', '-1', '', '0', '0', '', '0', '#000000', '25', '0', '0', '132', '314', '677', '343', '0', '0', '0', '6');
 
 -- ----------------------------
 -- Table structure for `scq_sc_info`
@@ -3633,13 +3649,17 @@ CREATE TABLE `scq_sc_info` (
   `sc_pre_img` varchar(100) DEFAULT NULL,
   `sc_before_img` varchar(100) DEFAULT NULL,
   `sc_add_date` varchar(100) DEFAULT NULL,
+  `sc_img_width` int(11) DEFAULT NULL,
+  `sc_img_height` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of scq_sc_info
 -- ----------------------------
-INSERT INTO `scq_sc_info` VALUES ('1', '2', '1', '九宫格爱心发射表白', '朋友圈爱心发射九宫格图片在线生成', '0', '0', '1557928933542.png', '1557928933555.png', '1557928933566.png', '2019-05-15 22:02:14');
+INSERT INTO `scq_sc_info` VALUES ('1', '2', '1', '九宫格爱心发射表白', '朋友圈爱心发射九宫格图片在线生成', '0', '0', '1557928933542.png', '1557928933555.png', '1557928933566.png', '2019-05-15 22:02:14', '0', '0');
+INSERT INTO `scq_sc_info` VALUES ('2', '4', '3', '婚礼邀请函', '我要结婚了，祝福我吧', '0', '0', '1558014561072.png', '1558014561089.png', '1558014561102.png', '2019-05-16 21:49:21', '0', '0');
+INSERT INTO `scq_sc_info` VALUES ('3', '4', '3', '分手协议', '我们分手吧，爱过！', '0', '0', '1558791929325.png', '1558791929339.png', '1558791929355.png', '2019-05-25 21:45:29', '861', '1147');
 
 -- ----------------------------
 -- Table structure for `t_course`

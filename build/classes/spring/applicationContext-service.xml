@@ -49,4 +49,7 @@
 	<bean id="sourceFieldInfoService" class="com.ant.scq.service.impl.SourceFieldInfoServiceImpl">
 		<property name="sourceFieldInfoDao" ref="sourceFieldInfoDao"></property>
 	</bean>
+	<bean id="specialInfoService" class="com.ant.scq.service.impl.SpecialInfoServiceImpl">
+		<property name="specialInfoDao" ref="specialInfoDao"></property>
+	</bean>
 </beans>

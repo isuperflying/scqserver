@@ -143,6 +143,11 @@ function toInput(){
 	window.location.href = "toInput.action";
 }
 
+function visableChange(){
+	var visable = $("#is_visable").val();
+	alert(visable);
+}
+
 //编辑
 function toEdit(id,name){
 	$("#sid").val(id);

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "T_USER")
+@Table(name = "T_SYSTEM_USER")
 public class User {
 	private int id;
 	/**

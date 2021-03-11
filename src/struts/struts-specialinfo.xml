@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 与spring集成的写法，action等交予spring管理 -->
+	<package name="specialInfoAction" namespace="/" extends="struts-default">
+	    <!-- 培训机构-->
+	    <action name="getSpecialInfoDataList" class="specialInfoAction" method="getSpecialInfoDataList">
+            <result name="success">specialinfo/special_info_list.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="toAddSpecialInfo" class="specialInfoAction" method="toAdd">
+            <result name="success">specialinfo/special_info_add.jsp</result>
+        </action>
+        <action name="toEditSpecialInfo" class="specialInfoAction" method="toEdit">
+            <result name="success">specialinfo/special_info_edit.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="getSpecialInfoByPage" class="specialInfoAction" method="getSpecialInfoByPage"></action>
+        <action name="saveSpecialInfo" class="specialInfoAction" method="saveSpecialInfo">
+        	<result name="success" type="redirectAction">getSpecialInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="updateSpecialInfo" class="specialInfoAction" method="updateSpecialInfo">
+        	<result name="success" type="redirectAction">getSpecialInfoDataList</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="deleteSpecialInfo" class="specialInfoAction" method="deleteSpecialInfo"></action>
+        <action name="inputSpecialInfoExcel" class="specialInfoAction" method="inputSpecialInfoExcel"></action>
+        <action name="getAllSpecialInfoByLevel" class="specialInfoAction" method="getAllSpecialInfoByLevel"></action>
+	</package>
+</struts>

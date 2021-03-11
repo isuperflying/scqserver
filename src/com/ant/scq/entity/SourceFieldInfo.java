@@ -23,13 +23,23 @@ public class SourceFieldInfo {
 	
 	private int isVisable;
 	
+	private int hideType;
+	
+	private String hideValue;
+	
 	private int inputType;
+	
+	private int inputLength;
+	
+	private int restrain;//0无约束，1整数，2，中文，3英文，4数值(小数)
+	
+	private String optionTxt;
 	
 	private int fontStyleType;
 	
 	private String fontColor;
 	
-	private int fontSize;
+	private Double fontSize;
 	
 	private int fontWay;
 	
@@ -52,6 +62,7 @@ public class SourceFieldInfo {
 	private int sid;
 	
 	private int fieldIndex;
+	
 	
 	@Id
 	// 采用数据库自增方式生成主键
@@ -101,6 +112,26 @@ public class SourceFieldInfo {
 	public void setIsVisable(int isVisable) {
 		this.isVisable = isVisable;
 	}
+	
+	
+	@Column(name = "hide_type")
+	public int getHideType() {
+		return hideType;
+	}
+
+	public void setHideType(int hideType) {
+		this.hideType = hideType;
+	}
+	
+	
+	@Column(name = "hide_value",length = 200)
+	public String getHideValue() {
+		return hideValue;
+	}
+
+	public void setHideValue(String hideValue) {
+		this.hideValue = hideValue;
+	}
 
 	@Column(name = "input_type")
 	public int getInputType() {
@@ -109,6 +140,24 @@ public class SourceFieldInfo {
 
 	public void setInputType(int inputType) {
 		this.inputType = inputType;
+	}
+	
+	@Column(name = "input_length")
+	public int getInputLength() {
+		return inputLength;
+	}
+
+	public void setInputLength(int inputLength) {
+		this.inputLength = inputLength;
+	}
+	
+	@Column(name = "option_txt",length = 500)
+	public String getOptionTxt() {
+		return optionTxt;
+	}
+
+	public void setOptionTxt(String optionTxt) {
+		this.optionTxt = optionTxt;
 	}
 
 	@Column(name = "font_style_type")
@@ -130,18 +179,19 @@ public class SourceFieldInfo {
 	}
 
 	@Column(name = "font_size")
-	public int getFontSize() {
+	public Double getFontSize() {
 		return fontSize;
 	}
 
-	public void setFontSize(int fontSize) {
+	public void setFontSize(Double fontSize) {
 		this.fontSize = fontSize;
 	}
-
+	
 	@Column(name = "font_way")
 	public int getFontWay() {
 		return fontWay;
 	}
+	
 
 	public void setFontWay(int fontWay) {
 		this.fontWay = fontWay;
@@ -227,6 +277,16 @@ public class SourceFieldInfo {
 
 	public void setFieldIndex(int fieldIndex) {
 		this.fieldIndex = fieldIndex;
+	}
+
+	
+	@Column(name = "restrain")
+	public int getRestrain() {
+		return restrain;
+	}
+
+	public void setRestrain(int restrain) {
+		this.restrain = restrain;
 	}
 
 	@Transient

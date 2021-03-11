@@ -37,36 +37,24 @@ $(document).ready(function(){
 			<!-- 部门是仓库的才可以看到，销售看不到 -->
 			<li>
 				<div class="header">
-					<span class="left_span2" >考试管理</span>
+					<span class="left_span2" >素材信息</span>
 					<span class="arrow down"></span>
 				</div>
 				<ul class="menu">
+					<li><a href="getSpecialInfoDataList.action" target="show" title="专题管理" class="left_span1">专题管理</a></li>
+				</ul>
+				<hr size=1>
+				<ul class="menu">
 					<li><a href="getSourceInfoDataList.action" target="show" title="素材管理" class="left_span1">素材管理</a></li>
 				</ul>
-				<hr size=1>
-				<ul class="menu">
-					<li><a href="getExamInfoDataList.action" target="show" title="试卷列表" class="left_span1">试卷列表</a></li>
-				</ul>
-				<hr size=1>
-				<ul class="menu">
-					<li><a href="getUserExamDataList.action" target="show" title="考试记录" class="left_span1">考试记录</a></li>
-				</ul>
+				
 			</li>
 			<li>
 				<div class="header">
 					<span class="left_span2">系统管理</span>
 					<span class="arrow down"></span>
 				</div>
-				<hr size=1>
-				<ul class="menu">
-					<li><a href="getScoreItemDataList.action" target="show" title="打分项设置" class="left_span1">打分项设置</a></li>
-				</ul>
-				<c:if test="${user.userType == 1 }">
-					<hr size=1>
-					<ul class="menu">
-						<li><a href="getUserDataList.action" target="show" title="用户管理" class="left_span1">用户管理</a></li>
-					</ul>
-				</c:if>
+				
 			</li>
 	</ul>
 </body>

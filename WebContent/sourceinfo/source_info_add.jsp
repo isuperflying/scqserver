@@ -112,6 +112,16 @@ function toAddSc(){
                     </td>
                 </tr>
                 <tr>
+                	<td align="right">素材预览图宽度:</td>
+                    <td align="left">
+                        <input id="sc_width" name="sourceInfo.scWidth" type="text" class="input"/>
+                    </td>
+                    <td align="right">素材预览图高度:</td>
+                    <td align="left">
+                        <input id="sc_height" name="sourceInfo.scHeight" type="text" class="input"/>
+                    </td>
+                </tr>
+                <tr>
                     <td align="right">素材缩略图:</td>
                     <td align="left" colspan="3">
                         <span style="height:30px;line-height:30px;" ><s:file name="thumbFile" id="thumb_file_name">选择文件:</s:file></span>
